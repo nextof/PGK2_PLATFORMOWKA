@@ -1,5 +1,74 @@
-﻿#pragma once
+#pragma once
 #include "game.hpp"
+
+void showGameOverScreen(RenderWindow& window, int finalScore, int numberLevel)
+{
+	// Ustawienie czcionki i tekstu
+	Font font;
+	if (!font.loadFromFile("res/7526.ttf")) {
+		// Błąd ładowania czcionki
+		return;
+	}
+
+	// Tekst "GAME OVER"
+	Text gameOverText("GAME OVER", font);
+	gameOverText.setFillColor(Color::Red);
+
+	// Tekst z wynikiem
+	Text scoreText("Your Score: " + std::to_string(finalScore), font);
+	scoreText.setFillColor(Color::White);
+
+	// Tekst z instrukcjami
+	Text restartText("Press ENTER to Restart or ESC to Exit", font);
+	restartText.setFillColor(Color::Yellow);
+
+	// Dopasowanie rozmiaru czcionki do okna
+	float windowWidth = window.getSize().x;
+	float windowHeight = window.getSize().y;
+
+	// Ustawienie bazowego rozmiaru czcionki w zależności od szerokości okna
+	float baseWidth = 1024.0f;
+	float scaleFactor = windowWidth / baseWidth;
+
+	gameOverText.setCharacterSize(50 * scaleFactor);  // Czcionka dla "GAME OVER"
+	scoreText.setCharacterSize(30 * scaleFactor);     // Czcionka dla "Your Score"
+	restartText.setCharacterSize(25 * scaleFactor);   // Czcionka dla instrukcji
+
+	// Ustawienie widoku gry
+	View view(FloatRect(0, 0, windowWidth, windowHeight));  // Widok dostosowany do okna
+	window.setView(view);
+
+	// Pętla wyświetlająca ekran
+	bool waitingForInput = true;
+	while (waitingForInput)
+	{
+		Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == Event::Closed || Keyboard::isKeyPressed(Keyboard::Escape)) {
+				window.close();  // Zamknięcie gry
+				waitingForInput = false;
+			}
+			if (Keyboard::isKeyPressed(Keyboard::Return)) {
+				RunGame(window, numberLevel);
+				waitingForInput = false;
+			}
+		}
+
+		// Pozycjonowanie tekstów w zależności od rozmiaru okna
+		gameOverText.setPosition(windowWidth / 2 - gameOverText.getLocalBounds().width / 2, windowHeight / 4);
+		scoreText.setPosition(windowWidth / 2 - scoreText.getLocalBounds().width / 2, windowHeight / 2);
+		restartText.setPosition(windowWidth / 2 - restartText.getLocalBounds().width / 2, windowHeight * 3 / 4);
+
+		// Rysowanie tekstów
+		window.clear();
+		window.draw(gameOverText);
+		window.draw(scoreText);
+		window.draw(restartText);
+		window.display();
+	}
+}
+
 
 float CheckX = 0, CheckY = 0;
 bool RunGame(RenderWindow& window, int& numberLevel)
@@ -196,9 +265,16 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 		}
 		if (p.isDead == true)
 		{
-			RunGame(window, numberLevel);
-			return false;
+			// Zapisz pozycję gracza
+			CheckX = p.sx;
+			CheckY = p.sy;
+
+			// Wywołanie ekranu z wynikiem
+			showGameOverScreen(window, p.cash, numberLevel);  // Przekazujemy liczbę monet
+
+			return false;  // Kończy grę i zamyka okno gry
 		}
+
 		// Sprawdzenie kolizji gracza z innymi obiektami.
 		for (it = entities.begin(); it != entities.end(); it++)
 		{
@@ -349,3 +425,5 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 	}
 
 }
+
+
