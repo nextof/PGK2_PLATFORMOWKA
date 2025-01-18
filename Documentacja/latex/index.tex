@@ -1,0 +1,37 @@
+\chapter{Gra platformowa 2D}
+\hypertarget{index}{}\label{index}\index{Gra platformowa 2D@{Gra platformowa 2D}}
+\hypertarget{index_wprowadzenie}{}\doxysection{\texorpdfstring{Wprowadzenie}{Wprowadzenie}}\label{index_wprowadzenie}
+Gra została napisana w języku C++, oparta na bibliotece SFML, w której gracz eksploruje poziomy, unika przeszkód, zbiera monety oraz stawia czoła przeciwnikom. Projekt demonstruje wykorzystanie animacji, zarządzania obiektami i kolizjami w środowisku gry.\hypertarget{index_funkcjonalnosci}{}\doxysection{\texorpdfstring{Kluczowe funkcjonalności}{Kluczowe funkcjonalności}}\label{index_funkcjonalnosci}
+
+\begin{DoxyItemize}
+\item {\bfseries{Sterowanie gracza\+:}} Możliwość ruchu, skakania i interakcji z otoczeniem.
+\item {\bfseries{Wrogowie\+:}} Prości przeciwnicy z logiką ruchu i kolizji.
+\item {\bfseries{Obiekty poziomu\+:}} Ruchome platformy, kolce, monety i punkty kontrolne.
+\item {\bfseries{Animacje\+:}} Obsługa animacji oparta na plikach XML.
+\item {\bfseries{Menu\+:}} Interfejs do rozpoczęcia nowej gry, wczytania stanu gry i sterowania.
+\item {\bfseries{Efekty dźwiękowe\+:}} Dźwięki interakcji, obrażeń, zbierania monet i innych zdarzeń.
+\end{DoxyItemize}\hypertarget{index_struktura}{}\doxysection{\texorpdfstring{Struktura projektu}{Struktura projektu}}\label{index_struktura}
+Projekt składa się z następujących komponentów\+:
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{game_8hpp}{game.\+hpp}/cpp\+:}} Główna logika gry, pętla gry, inicjalizacja zasobów i obiektów.
+\item {\bfseries{\doxylink{menu_8hpp}{menu.\+hpp}/cpp\+:}} Obsługa menu gry i ekranów końcowych.
+\item {\bfseries{\doxylink{player_8hpp}{player.\+hpp}/cpp\+:}} Klasa reprezentująca gracza, jego logikę ruchu, animacje i interakcje.
+\item {\bfseries{\doxylink{enemy_8hpp}{enemy.\+hpp}/cpp\+:}} Klasa przeciwnika z podstawową logiką ruchu i interakcji.
+\item {\bfseries{\doxylink{entity_8hpp}{entity.\+hpp}/cpp\+:}} Klasa bazowa dla wszystkich obiektów w grze, z obsługą animacji i kolizji.
+\item {\bfseries{\doxylink{animation_8hpp}{animation.\+hpp}/cpp\+:}} Zarządzanie animacjami obiektów na podstawie plików XML.
+\item {\bfseries{\doxylink{movingplatform_8hpp}{movingplatform.\+hpp}/cpp\+:}} Klasy dla ruchomych platform (w osi X i Y).
+\item {\bfseries{\doxylink{spikes_8hpp}{spikes.\+hpp}/cpp\+:}} Kolce jako przeszkody na poziomie.
+\item {\bfseries{\doxylink{coin_8hpp}{coin.\+hpp}/cpp\+:}} Monety zbierane przez gracza.
+\end{DoxyItemize}\hypertarget{index_sterowanie}{}\doxysection{\texorpdfstring{Sterowanie}{Sterowanie}}\label{index_sterowanie}
+
+\begin{DoxyItemize}
+\item {\bfseries{Strzałki lub A/D\+:}} Ruch w lewo/prawo.
+\item {\bfseries{Spacja lub W\+:}} Skok.
+\item {\bfseries{Shift\+:}} Przyspieszenie.
+\item {\bfseries{Escape\+:}} Pauza lub powrót do menu.
+\end{DoxyItemize}\hypertarget{index_autorzy}{}\doxysection{\texorpdfstring{Autorzy}{Autorzy}}\label{index_autorzy}
+
+\begin{DoxyItemize}
+\item Autorzy\+: Karol Wójcik, Jakub Sikora, Patryk Sobczyński
+\item Technologia\+: C++, SFML 2.\+6.\+1, Tiny\+XML 
+\end{DoxyItemize}

@@ -1,0 +1,428 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PGK2_PLATFORMOWKA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\player.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:player.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\level.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:level.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\spikes.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:spikes.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\tinyxml.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:tinyxml.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\tinyxml.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:tinyxml.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\animation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:animation.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\menu.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:menu.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\changelevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:changelevel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\animation.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:animation.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\nextlevel.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:nextlevel.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\movingplatformY.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:movingplatformY.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\movingplatform.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:movingplatform.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\game.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:game.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\entity.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:entity.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\enemy.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:enemy.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\coin.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:coin.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|C:\\PGK2_PLATFORMOWKA\\changelevel.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393DEFAF-DFA2-43A8-83F3-6976DA8D2E13}|PGK2_PLATFORMOWKA.vcxproj|solutionrelative:changelevel.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "level.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\level.hpp",
+              "RelativeDocumentMoniker": "level.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\level.hpp",
+              "RelativeToolTip": "level.hpp",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:55:26.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "level.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\level.cpp",
+              "RelativeDocumentMoniker": "level.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\level.cpp",
+              "RelativeToolTip": "level.cpp",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAAABsBAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:55:09.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "tinyxml.h",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\tinyxml.h",
+              "RelativeDocumentMoniker": "tinyxml.h",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\tinyxml.h",
+              "RelativeToolTip": "tinyxml.h",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAhwN8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:43:49.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "tinyxml.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\tinyxml.cpp",
+              "RelativeDocumentMoniker": "tinyxml.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\tinyxml.cpp",
+              "RelativeToolTip": "tinyxml.cpp",
+              "ViewState": "AQIAAPoDAAAAAAAAAAAhwBIEAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:43:47.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "player.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\player.cpp",
+              "RelativeDocumentMoniker": "player.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\player.cpp",
+              "RelativeToolTip": "player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:39:43.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "menu.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\menu.cpp",
+              "RelativeDocumentMoniker": "menu.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\menu.cpp",
+              "RelativeToolTip": "menu.cpp",
+              "ViewState": "AQIAACIAAAAAAAAAAAAhwD0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:33:11.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "game.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\game.cpp",
+              "RelativeDocumentMoniker": "game.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\game.cpp",
+              "RelativeToolTip": "game.cpp",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAAABEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:27:14.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "entity.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\entity.cpp",
+              "RelativeDocumentMoniker": "entity.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\entity.cpp",
+              "RelativeToolTip": "entity.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:26:04.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "enemy.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\enemy.cpp",
+              "RelativeDocumentMoniker": "enemy.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\enemy.cpp",
+              "RelativeToolTip": "enemy.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:19:53.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:18:08.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "changelevel.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\changelevel.cpp",
+              "RelativeDocumentMoniker": "changelevel.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\changelevel.cpp",
+              "RelativeToolTip": "changelevel.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:14:18.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "animation.cpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\animation.cpp",
+              "RelativeDocumentMoniker": "animation.cpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\animation.cpp",
+              "RelativeToolTip": "animation.cpp",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADkAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-18T14:11:05.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "spikes.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\spikes.hpp",
+              "RelativeDocumentMoniker": "spikes.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\spikes.hpp",
+              "RelativeToolTip": "spikes.hpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:10:36.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "player.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\player.hpp",
+              "RelativeDocumentMoniker": "player.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\player.hpp",
+              "RelativeToolTip": "player.hpp",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:09:29.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "nextlevel.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\nextlevel.hpp",
+              "RelativeDocumentMoniker": "nextlevel.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\nextlevel.hpp",
+              "RelativeToolTip": "nextlevel.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:09:29.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "movingplatformY.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\movingplatformY.hpp",
+              "RelativeDocumentMoniker": "movingplatformY.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\movingplatformY.hpp",
+              "RelativeToolTip": "movingplatformY.hpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:08:31.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "movingplatform.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\movingplatform.hpp",
+              "RelativeDocumentMoniker": "movingplatform.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\movingplatform.hpp",
+              "RelativeToolTip": "movingplatform.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:08:08.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "menu.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\menu.hpp",
+              "RelativeDocumentMoniker": "menu.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\menu.hpp",
+              "RelativeToolTip": "menu.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:08:02.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "game.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\game.hpp",
+              "RelativeDocumentMoniker": "game.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\game.hpp",
+              "RelativeToolTip": "game.hpp",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAADYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:07:22.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "entity.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\entity.hpp",
+              "RelativeDocumentMoniker": "entity.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\entity.hpp",
+              "RelativeToolTip": "entity.hpp",
+              "ViewState": "AQIAACwAAAAAAAAAAAAAAFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:06:50.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "enemy.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\enemy.hpp",
+              "RelativeDocumentMoniker": "enemy.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\enemy.hpp",
+              "RelativeToolTip": "enemy.hpp",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAADYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:06:23.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "coin.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\coin.hpp",
+              "RelativeDocumentMoniker": "coin.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\coin.hpp",
+              "RelativeToolTip": "coin.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:06:02.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "changelevel.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\changelevel.hpp",
+              "RelativeDocumentMoniker": "changelevel.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\changelevel.hpp",
+              "RelativeToolTip": "changelevel.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:05:41.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "animation.hpp",
+              "DocumentMoniker": "C:\\PGK2_PLATFORMOWKA\\animation.hpp",
+              "RelativeDocumentMoniker": "animation.hpp",
+              "ToolTip": "C:\\PGK2_PLATFORMOWKA\\animation.hpp",
+              "RelativeToolTip": "animation.hpp",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAABQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-18T14:01:50.822Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

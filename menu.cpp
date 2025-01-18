@@ -1,10 +1,11 @@
-#pragma once
+﻿#pragma once
 #include "menu.hpp"
 
 using namespace sf;
 
 int menu(sf::RenderWindow& window)
 {
+	// Ustawienia muzyki i dźwięków dla menu.
 	Music musicMenu;
 	musicMenu.openFromFile("res/sound/menu.wav");
 	musicMenu.play();
@@ -25,6 +26,7 @@ int menu(sf::RenderWindow& window)
 	back.loadFromFile("res/sound/return.wav");
 	Sound backSound(back);
 
+	// Wczytanie tekstur do elementów menu.
 	Texture menuTexture1, menuTexture2, menuTexture3, menuTexture4, keyTexture, menuBackground;
 	menuTexture1.loadFromFile("res/images/nowagra.png");
 	menuTexture3.loadFromFile("res/images/sterowanie.png");
@@ -34,21 +36,26 @@ int menu(sf::RenderWindow& window)
 	keyTexture.loadFromFile("res/images/controls.png");
 	menuBackground.loadFromFile("res/images/menuBack.jpg");
 
+	// Inicjalizacja elementów graficznych menu.
 	Sprite menu1(menuTexture1), menu2(menuTexture2), menu3(menuTexture3), menu4(menuTexture4), key(keyTexture), menuBg(menuBackground);
 	bool isMenu = 1;
 	int menuNum = 0;
-	sf::Color color(255, 168, 65);
+	sf::Color color(255, 168, 65); // Kolor podświetlenia.
 	menu1.setPosition(270, 150);
 	menu2.setPosition(250, 250);
 	menu3.setPosition(250, 350);
 	menu4.setPosition(240, 550);
 
 	int newgame = 0;
-	int position = 1;
+	int position = 1; // Początkowa pozycja w menu.
+
 
 	sf::Event event;
+
+	// Pętla obsługująca menu.
 	while (isMenu)
 	{
+		// Resetowanie kolorów elementów menu.
 		menu1.setColor(Color::White);
 		menu2.setColor(Color::White);
 		menu3.setColor(Color::White);
@@ -57,6 +64,7 @@ int menu(sf::RenderWindow& window)
 		menuNum = 0;
 		window.clear(Color(129, 181, 221));
 
+		// Obsługa zdarzeń 
 		while (window.pollEvent(event))
 		{
 			if ((event.type == Event::KeyPressed) && (event.key.code == Keyboard::Down))
@@ -71,6 +79,7 @@ int menu(sf::RenderWindow& window)
 			}
 		}
 
+		// Podswietlanie opcji
 		if (position == 1) { menu1.setColor(color); menuNum = 1; }
 		if (position == 2) { menu2.setColor(color); menuNum = 2; }
 		if (position == 3) { menu3.setColor(color); menuNum = 3; }
@@ -80,6 +89,7 @@ int menu(sf::RenderWindow& window)
 		if (position == 0) { position = 4; }
 		if (position == 5) { position = 1; }
 
+		// Obsługa wybranych opcji menu.
 		if (Keyboard::isKeyPressed(Keyboard::Return))
 		{
 			openSound.play();
@@ -89,7 +99,7 @@ int menu(sf::RenderWindow& window)
 			if (menuNum == 4) { exit(0); } 
 
 		}
-
+		// Rysowanie elementów menu.
 		window.draw(menuBg);
 		window.draw(menu1);
 		window.draw(menu2);
@@ -105,12 +115,14 @@ int menu(sf::RenderWindow& window)
 
 void end(sf::RenderWindow& window, int& numberLevel)
 {
+	// Muzyka końca gry.
 	Music musicEnd;
 	musicEnd.openFromFile("res/sound/end.ogg");
 	musicEnd.setVolume(50);
 	musicEnd.setLoop(true);
 	musicEnd.play();
 
+	// Tło końca gry.
 	Texture endTexture;
 	endTexture.loadFromFile("res/images/end.jpg");
 
@@ -120,6 +132,7 @@ void end(sf::RenderWindow& window, int& numberLevel)
 	View view; view.reset(FloatRect(0, 0, 1024, 768));
 	window.setView(view);
 
+	// Pętla ekranu końca gry.
 	while (isMenu)
 	{
 		window.clear(Color(77, 83, 140));
@@ -141,6 +154,7 @@ void text(sf::RenderWindow& window, int& numberLevel)
 	musicText.setLoop(true);
 	musicText.setVolume(50);
 
+	// Wczytanie obrazów.
 	Texture p1, p2, p3, p4;
 	p1.loadFromFile("res/images/1.png");
 	p2.loadFromFile("res/images/2.png");
@@ -153,6 +167,7 @@ void text(sf::RenderWindow& window, int& numberLevel)
 	View view; view.reset(FloatRect(0, 0, 1024, 768));
 	window.setView(view);
 
+	// Pętla wyświetlania odpowiedniego obrazu na podstawie poziomu.
 	while (isMenu)
 	{
 

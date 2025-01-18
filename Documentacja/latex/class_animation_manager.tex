@@ -1,0 +1,256 @@
+\doxysection{Animation\+Manager Class Reference}
+\hypertarget{class_animation_manager}{}\label{class_animation_manager}\index{AnimationManager@{AnimationManager}}
+
+
+Klasa zarządzająca wieloma animacjami.  
+
+
+
+
+{\ttfamily \#include $<$animation.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animation_manager_a1a07273c87def56cab82a1795f29f2e4}{Animation\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny klasy \doxylink{class_animation_manager}{Animation\+Manager}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation_manager_a3a8c725f2aa41692ed7ec4ef0957c365}{\texorpdfstring{$\sim$}{\string~}\+Animation\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_animation_manager}{Animation\+Manager}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_a4187aa6cea56e4714c88336fa4b3418f}{load\+From\+XML}} (std\+::string file\+Name, Texture \&t)
+\begin{DoxyCompactList}\small\item\em Wczytuje animacje z pliku XML. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_a8db8f3b7c4113ffc623be5a7e310c3c8}{set}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Ustawia aktualną animację na podstawie jej nazwy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_a2cc526e9151b302686a5e4ee74b508f9}{draw}} (Render\+Window \&window, int x, int y)
+\begin{DoxyCompactList}\small\item\em Rysuje aktualną animację w oknie gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_a6afcde12e65c40c002c851df294bd4f4}{flip}} (bool b)
+\begin{DoxyCompactList}\small\item\em Ustawia, czy animacja ma być odwrócona. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_a60b2e6524eaabf101c4571744f5d2f0c}{tick}} (float time)
+\begin{DoxyCompactList}\small\item\em Aktualizuje stan animacji na podstawie upływu czasu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_ab5fef9a92d8e986d0e133537ade21868}{pause}} ()
+\begin{DoxyCompactList}\small\item\em Zatrzymuje aktualną animację. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_afd825540efab75c560019eeedf3ac8f5}{play}} ()
+\begin{DoxyCompactList}\small\item\em Wznawia odtwarzanie aktualnej animacji. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_manager_a3d19c1ff75e46de68b115c2db16a1a90}{play}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Odtwarza wskazaną animację. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_animation_manager_a191135efa36385ec980f492399d6fb62}{is\+Playing}} ()
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy aktualna animacja jest odtwarzana. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_animation_manager_a8d473eb750e2753d7b95ab5b3398a509}{getH}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera wysokość aktualnej animacji. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_animation_manager_ab4a37886a538691fabe6a7e952bb919c}{getW}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera szerokość aktualnej animacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_animation_manager_a14db0a488c42509257b7b9e907c3ad36}{current\+Anim}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{class_animation}{Animation}} $>$ \mbox{\hyperlink{class_animation_manager_aaebc949668e578dcaa816b398e2c1c72}{anim\+List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa zarządzająca wieloma animacjami. 
+
+Umożliwia wczytywanie animacji z pliku XML, zarządzanie ich stanami i rysowanie na ekranie. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_animation_manager_a1a07273c87def56cab82a1795f29f2e4}\label{class_animation_manager_a1a07273c87def56cab82a1795f29f2e4} 
+\index{AnimationManager@{AnimationManager}!AnimationManager@{AnimationManager}}
+\index{AnimationManager@{AnimationManager}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{AnimationManager()}{AnimationManager()}}
+{\footnotesize\ttfamily Animation\+Manager\+::\+Animation\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny klasy \doxylink{class_animation_manager}{Animation\+Manager}. 
+
+\Hypertarget{class_animation_manager_a3a8c725f2aa41692ed7ec4ef0957c365}\label{class_animation_manager_a3a8c725f2aa41692ed7ec4ef0957c365} 
+\index{AnimationManager@{AnimationManager}!````~AnimationManager@{\texorpdfstring{$\sim$}{\string~}AnimationManager}}
+\index{````~AnimationManager@{\texorpdfstring{$\sim$}{\string~}AnimationManager}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AnimationManager()}{\string~AnimationManager()}}
+{\footnotesize\ttfamily Animation\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Animation\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{class_animation_manager}{Animation\+Manager}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animation_manager_a2cc526e9151b302686a5e4ee74b508f9}\label{class_animation_manager_a2cc526e9151b302686a5e4ee74b508f9} 
+\index{AnimationManager@{AnimationManager}!draw@{draw}}
+\index{draw@{draw}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Animation\+Manager\+::draw (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{window,  }\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Rysuje aktualną animację w oknie gry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Obiekt Render\+Window, w którym animacja będzie rysowana. \\
+\hline
+{\em x} & Pozycja X rysowanej animacji. \\
+\hline
+{\em y} & Pozycja Y rysowanej animacji. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_manager_a6afcde12e65c40c002c851df294bd4f4}\label{class_animation_manager_a6afcde12e65c40c002c851df294bd4f4} 
+\index{AnimationManager@{AnimationManager}!flip@{flip}}
+\index{flip@{flip}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{flip()}{flip()}}
+{\footnotesize\ttfamily void Animation\+Manager\+::flip (\begin{DoxyParamCaption}\item[{bool}]{b = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Ustawia, czy animacja ma być odwrócona. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Wartość logiczna wskazująca odwrócenie. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_manager_a8d473eb750e2753d7b95ab5b3398a509}\label{class_animation_manager_a8d473eb750e2753d7b95ab5b3398a509} 
+\index{AnimationManager@{AnimationManager}!getH@{getH}}
+\index{getH@{getH}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{getH()}{getH()}}
+{\footnotesize\ttfamily float Animation\+Manager\+::getH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobiera wysokość aktualnej animacji. 
+
+\begin{DoxyReturn}{Returns}
+float Wysokość animacji. 
+\end{DoxyReturn}
+\Hypertarget{class_animation_manager_ab4a37886a538691fabe6a7e952bb919c}\label{class_animation_manager_ab4a37886a538691fabe6a7e952bb919c} 
+\index{AnimationManager@{AnimationManager}!getW@{getW}}
+\index{getW@{getW}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{getW()}{getW()}}
+{\footnotesize\ttfamily float Animation\+Manager\+::getW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobiera szerokość aktualnej animacji. 
+
+\begin{DoxyReturn}{Returns}
+float Szerokość animacji. 
+\end{DoxyReturn}
+\Hypertarget{class_animation_manager_a191135efa36385ec980f492399d6fb62}\label{class_animation_manager_a191135efa36385ec980f492399d6fb62} 
+\index{AnimationManager@{AnimationManager}!isPlaying@{isPlaying}}
+\index{isPlaying@{isPlaying}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{isPlaying()}{isPlaying()}}
+{\footnotesize\ttfamily bool Animation\+Manager\+::is\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sprawdza, czy aktualna animacja jest odtwarzana. 
+
+\begin{DoxyReturn}{Returns}
+true Jeśli animacja jest odtwarzana. 
+
+false Jeśli animacja jest zatrzymana. 
+\end{DoxyReturn}
+\Hypertarget{class_animation_manager_a4187aa6cea56e4714c88336fa4b3418f}\label{class_animation_manager_a4187aa6cea56e4714c88336fa4b3418f} 
+\index{AnimationManager@{AnimationManager}!loadFromXML@{loadFromXML}}
+\index{loadFromXML@{loadFromXML}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{loadFromXML()}{loadFromXML()}}
+{\footnotesize\ttfamily void Animation\+Manager\+::load\+From\+XML (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name,  }\item[{Texture \&}]{t }\end{DoxyParamCaption})}
+
+
+
+Wczytuje animacje z pliku XML. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Ścieżka do pliku XML z definicją animacji. \\
+\hline
+{\em t} & Tekstura używana przez animacje. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_manager_ab5fef9a92d8e986d0e133537ade21868}\label{class_animation_manager_ab5fef9a92d8e986d0e133537ade21868} 
+\index{AnimationManager@{AnimationManager}!pause@{pause}}
+\index{pause@{pause}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Animation\+Manager\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zatrzymuje aktualną animację. 
+
+\Hypertarget{class_animation_manager_afd825540efab75c560019eeedf3ac8f5}\label{class_animation_manager_afd825540efab75c560019eeedf3ac8f5} 
+\index{AnimationManager@{AnimationManager}!play@{play}}
+\index{play@{play}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Animation\+Manager\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wznawia odtwarzanie aktualnej animacji. 
+
+\Hypertarget{class_animation_manager_a3d19c1ff75e46de68b115c2db16a1a90}\label{class_animation_manager_a3d19c1ff75e46de68b115c2db16a1a90} 
+\index{AnimationManager@{AnimationManager}!play@{play}}
+\index{play@{play}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Animation\+Manager\+::play (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Odtwarza wskazaną animację. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa animacji do odtworzenia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_manager_a8db8f3b7c4113ffc623be5a7e310c3c8}\label{class_animation_manager_a8db8f3b7c4113ffc623be5a7e310c3c8} 
+\index{AnimationManager@{AnimationManager}!set@{set}}
+\index{set@{set}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Animation\+Manager\+::set (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Ustawia aktualną animację na podstawie jej nazwy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa animacji. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_manager_a60b2e6524eaabf101c4571744f5d2f0c}\label{class_animation_manager_a60b2e6524eaabf101c4571744f5d2f0c} 
+\index{AnimationManager@{AnimationManager}!tick@{tick}}
+\index{tick@{tick}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Animation\+Manager\+::tick (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+
+
+Aktualizuje stan animacji na podstawie upływu czasu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas, który upłynął od ostatniej aktualizacji. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_animation_manager_aaebc949668e578dcaa816b398e2c1c72}\label{class_animation_manager_aaebc949668e578dcaa816b398e2c1c72} 
+\index{AnimationManager@{AnimationManager}!animList@{animList}}
+\index{animList@{animList}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{animList}{animList}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{class_animation}{Animation}}$>$ Animation\+Manager\+::anim\+List}
+
+Lista wszystkich animacji. \Hypertarget{class_animation_manager_a14db0a488c42509257b7b9e907c3ad36}\label{class_animation_manager_a14db0a488c42509257b7b9e907c3ad36} 
+\index{AnimationManager@{AnimationManager}!currentAnim@{currentAnim}}
+\index{currentAnim@{currentAnim}!AnimationManager@{AnimationManager}}
+\doxysubsubsection{\texorpdfstring{currentAnim}{currentAnim}}
+{\footnotesize\ttfamily std\+::string Animation\+Manager\+::current\+Anim}
+
+Nazwa aktualnie odtwarzanej animacji. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{animation_8hpp}{animation.\+hpp}}\item 
+\mbox{\hyperlink{animation_8cpp}{animation.\+cpp}}\end{DoxyCompactItemize}

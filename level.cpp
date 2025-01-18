@@ -1,4 +1,4 @@
-#include "level.hpp"
+﻿#include "level.hpp"
 
 int Object::GetPropertyInt(std::string name)
 {
@@ -15,6 +15,8 @@ std::string Object::GetPropertyString(std::string name)
 	return properties[name];
 }
 
+
+// Wczytuje poziom z pliku XML.
 bool Level::LoadFromFile(std::string filename)
 {
 	TiXmlDocument levelFile(filename.c_str());
@@ -26,15 +28,17 @@ bool Level::LoadFromFile(std::string filename)
 		return false;
 	}
 
-	
+	// Pobranie głównego elementu mapy.
 	TiXmlElement *map;
 	map = levelFile.FirstChildElement("map");
 
+	// Wczytanie rozmiaru poziomu i kafelków.
 	width = atoi(map->Attribute("width"));
 	height = atoi(map->Attribute("height")); 
 	tileWidth = atoi(map->Attribute("tilewidth"));
 	tileHeight = atoi(map->Attribute("tileheight"));
 
+	// Wczytanie informacji o zestawie kafelków.
 	TiXmlElement *tilesetElement;
 	tilesetElement = map->FirstChildElement("tileset");
 	firstTileID = atoi(tilesetElement->Attribute("firstgid"));
@@ -51,10 +55,12 @@ bool Level::LoadFromFile(std::string filename)
 		return false;
 	}
 
-	img.createMaskFromColor(sf::Color(255, 255, 255));
-	tilesetImage.loadFromImage(img);
+	// Wczytanie obrazu zestawu kafelków.
+	img.createMaskFromColor(sf::Color(255, 255, 255)); // Tworzenie maski koloru.
+	tilesetImage.loadFromImage(img); // Załadowanie tekstury.
 	tilesetImage.setSmooth(false);
 
+	// Obliczanie prostokątów dla każdego kafelka.
 	int columns = tilesetImage.getSize().x / tileWidth;
 	int rows = tilesetImage.getSize().y / tileHeight;
 
@@ -73,6 +79,7 @@ bool Level::LoadFromFile(std::string filename)
 			subRects.push_back(rect);
 		}
 
+	// Wczytywanie warstw kafelków.
 	TiXmlElement *layerElement;
 	layerElement = map->FirstChildElement("layer");
 	while (layerElement)
@@ -89,6 +96,7 @@ bool Level::LoadFromFile(std::string filename)
 			layer.opacity = 255;
 		}
 
+		// Wczytywanie kafelków z warstwy.
 		TiXmlElement *layerDataElement;
 		layerDataElement = layerElement->FirstChildElement("data");
 
@@ -142,6 +150,7 @@ bool Level::LoadFromFile(std::string filename)
 		layerElement = layerElement->NextSiblingElement("layer");
 	}
 
+	// Wczytywanie obiektów.
 	TiXmlElement *objectGroupElement;
 
 	if (map->FirstChildElement("objectgroup") != NULL)
@@ -234,6 +243,7 @@ bool Level::LoadFromFile(std::string filename)
 	return true;
 }
 
+// Pobiera obiekt o podanej nazwie.
 Object Level::GetObject(std::string name)
 {
 	for (int i = 0; i < objects.size(); i++)
@@ -241,6 +251,7 @@ Object Level::GetObject(std::string name)
 			return objects[i];
 }
 
+// Pobiera wszystkie obiekty o podanej nazwie.
 std::vector<Object> Level::GetObjects(std::string name)
 {
 
@@ -270,6 +281,7 @@ sf::Vector2i Level::GetTileSize()
 	return sf::Vector2i(tileWidth, tileHeight);
 }
 
+// Rysuje wszystkie warstwy poziomu.
 void Level::Draw(sf::RenderWindow &window)
 {
 	for (int layer = 0; layer < layers.size(); layer++)

@@ -4,10 +4,11 @@
 float CheckX = 0, CheckY = 0;
 bool RunGame(RenderWindow& window, int& numberLevel)
 {
-	View view(FloatRect(0, 0, 640, 480));
+	View view(FloatRect(0, 0, 640, 480));  // Ustaw widok gry.
 
 	Level lvl;
 
+	// Ładowanie dźwięków do gry.
 	SoundBuffer damage;
 	damage.loadFromFile("res/sound/damage.wav");
 	Sound damageSound(damage);
@@ -23,8 +24,10 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 	Sound coinSound(coin);
 	coinSound.setVolume(10);
 
+	// Ładowanie poziomu.
 	changeLevel(lvl, numberLevel);
 
+	// Ładowanie grafik tła i innych zasobów.
 	Image background;
 	background.loadFromFile("res/images/black.png");
 	Texture backgroundTexture;
@@ -82,7 +85,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 	coinTexture.setSmooth(true);
 	coinTexture.loadFromImage(coinImage);
 
-
+	//Wczytywanie animacji z XML 
 	AnimationManager anim;
 	anim.loadFromXML("res/player.xml", heroTexture);
 	anim.animList["jump"].loop = 0;
@@ -103,19 +106,23 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 	AnimationManager anim6;
 	anim6.loadFromXML("res/movingPlatformY.xml", movePlatformTextureY);
 
-
 	AnimationManager anim9;
 	anim9.loadFromXML("res/Coin.xml", coinTexture);
 
+	// Konfiguracja tekstu HUD
 	Font font;
 	font.loadFromFile("res/7526.ttf");
 	Text text("", font, 30);
 	text.setFillColor(Color(218, 165, 32));
 
+	
+	// Tworzenie listy wszystkich obiektów w grze
 	std::list<Entity*>  entities;
 	std::list<Entity*>::iterator it;
 	std::list<Entity*>::iterator it2;
 
+
+	// Dodawanie obiektów do listy
 	std::vector<Object> e = lvl.GetObjects("EasyEnemy");
 	for (int i = 0; i < e.size(); i++)
 		entities.push_back(new Enemy(anim2, lvl, e[i].rect.left, e[i].rect.top));
@@ -141,6 +148,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 		entities.push_back(new MovingPlatformY(anim6, lvl, e[i].rect.left, e[i].rect.top));
 
 
+	// Tworzenie gracza i przypisanie pozycji.
 	Object pl = lvl.GetObject("player");
 	Player p(anim, lvl, pl.rect.left, pl.rect.top);
 	if ((CheckX != 0) && (CheckY != 0)) {
@@ -153,6 +161,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 
 	Clock clock;
 
+	// Główna pętla gry.
 	while (window.isOpen())
 	{
 		float time = clock.getElapsedTime().asMicroseconds();
@@ -160,15 +169,16 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 
 		time = time / 800;  
 
-		if (time > 40) time = 40;
+		if (time > 40) time = 40; // Ograniczenie czasu aktualizacji.
 
 		Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == Event::Closed)
-				window.close();
+			if (event.type == Event::Closed) // Obsługa zamknięcia okna.
+				window.close(); 
 		}
 
+		// Obsługa klawiszy sterowania.
 		if (Keyboard::isKeyPressed(Keyboard::Left)) p.key["L"] = true;
 		if (Keyboard::isKeyPressed(Keyboard::Right)) p.key["R"] = true;
 		if (Keyboard::isKeyPressed(Keyboard::Space)) p.key["Space"] = true;
@@ -177,6 +187,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 		if (Keyboard::isKeyPressed(Keyboard::D)) p.key["D"] = true;
 		if (Keyboard::isKeyPressed(Keyboard::W)) p.key["W"] = true;
 
+		// Aktualizacja stanu wszystkich obiektów.
 		for (it = entities.begin(); it != entities.end();)
 		{
 			Entity* b = *it;
@@ -188,6 +199,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 			RunGame(window, numberLevel);
 			return false;
 		}
+		// Sprawdzenie kolizji gracza z innymi obiektami.
 		for (it = entities.begin(); it != entities.end(); it++)
 		{
 
@@ -244,8 +256,6 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 			if (((*it)->Name == "NextLevel") && ((*it)->getRect().intersects(p.getRect())))
 			{
 				numberLevel++;
-				//if (numberLevel == 3) numberLevel = 4;
-				//else if (numberLevel = 5) numberLevel = 7;
 				std::ofstream fout("res/save.txt", std::ios_base::trunc);
 				fout.close();
 				fout.open("res/save.txt", std::ios_base::out);
@@ -291,7 +301,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 							(*it)->anim.set("moveRight");
 					}
 			}
-			if (p.getLife() <= 0) p.isDead = true;
+			if (p.getLife() <= 0) p.isDead = true; // Sprawdzenie stanu życia gracza.
 			if (p.isDead == true)
 			{
 				CheckX = p.sx;
@@ -301,23 +311,25 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 
 		if (Keyboard::isKeyPressed(Keyboard::Escape)) { return false; }
 		p.update(time);
+		// Aktualizacja pozycji kamery i tła.
 		view.setCenter(p.x, p.y);
 		window.setView(view);
 
 		backgroundSprite.setPosition(view.getCenter());
 		background2Sprite.setPosition(view.getCenter());
-		//if (numberLevel == 3)
-		//	window.draw(background2Sprite);
-		//else
+		if (numberLevel == 3)
+			window.draw(background2Sprite);
+		else
 			window.draw(backgroundSprite);
 
-		lvl.Draw(window);
+		lvl.Draw(window); // Rysowanie poziomu.
 
 		for (it = entities.begin(); it != entities.end(); it++)
 			(*it)->draw(window);
 
 		p.draw(window);
 
+		// Wyświetlanie liczby monet.
 		std::ostringstream playerCash;
 		playerCash << p.cash;
 		text.setString("MONETY " + playerCash.str());
@@ -325,6 +337,7 @@ bool RunGame(RenderWindow& window, int& numberLevel)
 
 		window.draw(text);
 
+		// Wyświetlanie liczby żyć.
 		std::ostringstream playerLife;
 		playerLife << p.getLife();
 		text.setString("HP " + playerLife.str());

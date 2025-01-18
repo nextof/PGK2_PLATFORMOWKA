@@ -1,0 +1,88 @@
+\doxysection{menu.\+hpp File Reference}
+\hypertarget{menu_8hpp}{}\label{menu_8hpp}\index{menu.hpp@{menu.hpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$SFML/\+Audio.\+hpp$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_8hpp_a9552ba249c0540ffe9a08a05d1b92504}{MENU\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{menu_8hpp_a033a727502461acfb341b763077d491a}{menu}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Wyświetla menu główne gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8hpp_ad856d0120467a7d578a5f71fb550d0cb}{end}} (sf\+::\+Render\+Window \&window, int \&number\+Level)
+\begin{DoxyCompactList}\small\item\em Wyświetla ekran końcowy gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8hpp_ad07d729d463421b435284bf739287d70}{text}} (sf\+::\+Render\+Window \&window, int \&number\+Level)
+\begin{DoxyCompactList}\small\item\em Wyświetla obrazy pomiędzy poziomami. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{menu_8hpp_a9552ba249c0540ffe9a08a05d1b92504}\label{menu_8hpp_a9552ba249c0540ffe9a08a05d1b92504} 
+\index{menu.hpp@{menu.hpp}!MENU\_H@{MENU\_H}}
+\index{MENU\_H@{MENU\_H}!menu.hpp@{menu.hpp}}
+\doxysubsubsection{\texorpdfstring{MENU\_H}{MENU\_H}}
+{\footnotesize\ttfamily \#define MENU\+\_\+H}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8hpp_ad856d0120467a7d578a5f71fb550d0cb}\label{menu_8hpp_ad856d0120467a7d578a5f71fb550d0cb} 
+\index{menu.hpp@{menu.hpp}!end@{end}}
+\index{end@{end}!menu.hpp@{menu.hpp}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void end (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int \&}]{number\+Level }\end{DoxyParamCaption})}
+
+
+
+Wyświetla ekran końcowy gry. 
+
+Funkcja obsługuje renderowanie ekranu końcowego po zakończeniu gry oraz może zmieniać stan gry w zależności od numeru poziomu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Obiekt sf\+::\+Render\+Window reprezentujący okno gry. \\
+\hline
+{\em number\+Level} & Referencja do numeru poziomu, który może zostać zaktualizowany. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menu_8hpp_a033a727502461acfb341b763077d491a}\label{menu_8hpp_a033a727502461acfb341b763077d491a} 
+\index{menu.hpp@{menu.hpp}!menu@{menu}}
+\index{menu@{menu}!menu.hpp@{menu.hpp}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily int menu (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Wyświetla menu główne gry. 
+
+Funkcja obsługuje logikę i renderowanie menu głównego, umożliwiając graczowi rozpoczęcie nowej gry lub kontynuowanie z zapisanego poziomu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Obiekt sf\+::\+Render\+Window reprezentujący okno gry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Zwraca 1, jeśli gracz wybierze rozpoczęcie nowej gry. 
+\end{DoxyReturn}
+\Hypertarget{menu_8hpp_ad07d729d463421b435284bf739287d70}\label{menu_8hpp_ad07d729d463421b435284bf739287d70} 
+\index{menu.hpp@{menu.hpp}!text@{text}}
+\index{text@{text}!menu.hpp@{menu.hpp}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily void text (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{int \&}]{number\+Level }\end{DoxyParamCaption})}
+
+
+
+Wyświetla obrazy pomiędzy poziomami. 
+
+Funkcja obsługuje renderowanie obrazów na ekranie, które są powiązane z aktualnym poziomem gry.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Obiekt sf\+::\+Render\+Window reprezentujący okno gry. \\
+\hline
+{\em number\+Level} & Referencja do numeru poziomu, którego dotyczy tekst. \\
+\hline
+\end{DoxyParams}

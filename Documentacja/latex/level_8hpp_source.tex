@@ -1,0 +1,67 @@
+\doxysection{level.\+hpp}
+\hypertarget{level_8hpp_source}{}\label{level_8hpp_source}\mbox{\hyperlink{level_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LEVEL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LEVEL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}tinyxml.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_object}{Object}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_object_a3508bb776edb1139d41c10c1302a532a}{GetPropertyInt}}(std::string\ \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_object_addc3379119fd3cc698ff466c9d371f30}{GetPropertyFloat}}(std::string\ \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_object_a3979e6a58390fb4244535f320a3e5db8}{GetPropertyString}}(std::string\ \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ \mbox{\hyperlink{struct_object_a2f0ab0ca2d98028fd10807a03fcd75e5}{type}};\ }
+\DoxyCodeLine{00042\ \ \ \ \ sf::Rect<float>\ \mbox{\hyperlink{struct_object_a6d0f620ca560913148b2e56f7e5d424a}{rect}};\ }
+\DoxyCodeLine{00043\ \ \ \ \ std::map<std::string,\ std::string>\ \mbox{\hyperlink{struct_object_af4ca2590a9451ea032eb5aa1f7c799a0}{properties}};\ }
+\DoxyCodeLine{00044\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{struct_object_a65be09abc56e93e0154c3a0e37f97579}{sprite}};\ }
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_layer}{Layer}}}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_layer_a335b0615d255a1163f1728a9809423e2}{opacity}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<sf::Sprite>\ \mbox{\hyperlink{struct_layer_a14ab8b141e54f1e2bfd2a6746c2fc077}{tiles}};\ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_level_a3cd4b851e4f4088bfa5f82ab1249c761}{levelNumber}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_level_a1f10e04fbe066347b35705c01dc0b115}{LoadFromFile}}(std::string\ filename);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{struct_object}{Object}}\ \mbox{\hyperlink{class_level_aafa37d550b85fed38e0159f5b257807f}{GetObject}}(std::string\ name);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::vector<Object>\ \mbox{\hyperlink{class_level_af2cf043bba0975f84715b2440c533e63}{GetObjects}}(std::string\ name);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ std::vector<Object>\ \mbox{\hyperlink{class_level_ab452f6b61d41944913e65b38065acb00}{GetObjects2}}(std::string\ name,\ std::string\ name2);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::vector<Object>\ \mbox{\hyperlink{class_level_ad19d1668472c30ef1aa1360a52f129cf}{GetAllObjects}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ sf::Vector2i\ \mbox{\hyperlink{class_level_aa857a970cf07f16316546f82ce9cd3e4}{GetTileSize}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_ae3c2bfbfc60cb52c1945eea100141f32}{Draw}}(sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ width;\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ height;\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ tileWidth;\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ tileHeight;\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ firstTileID;\ }
+\DoxyCodeLine{00121\ \ \ \ \ sf::Rect<float>\ drawingBounds;\ }
+\DoxyCodeLine{00122\ \ \ \ \ sf::Texture\ tilesetImage;\ }
+\DoxyCodeLine{00123\ \ \ \ \ std::vector<Object>\ objects;\ }
+\DoxyCodeLine{00124\ \ \ \ \ std::vector<Layer>\ layers;\ }
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LEVEL\_H}}
+
+\end{DoxyCode}

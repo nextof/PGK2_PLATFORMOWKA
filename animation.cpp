@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "animation.hpp"
 
 Animation::Animation()
@@ -21,8 +21,8 @@ void Animation::tick(float time)
 	}
 
 	int i = currentFrame;
-	sprite.setTextureRect(frames[i]);
-	if (flip) sprite.setTextureRect(frames_flip[i]);
+	sprite.setTextureRect(frames[i]); // Aktualizacja klatki animacji.
+	if (flip) sprite.setTextureRect(frames_flip[i]); // Ustaw odwróconą klatkę, jeśli wymaga tego stan.
 }
 
 
@@ -31,7 +31,7 @@ AnimationManager::AnimationManager()
 
 AnimationManager::~AnimationManager()
 {
-	animList.clear();
+	animList.clear(); // Usuń wszystkie animacje z pamięci.
 }
 
 void AnimationManager::loadFromXML(std::string fileName, Texture& t)
@@ -48,9 +48,9 @@ void AnimationManager::loadFromXML(std::string fileName, Texture& t)
 	while (animElement)
 	{
 		Animation anim;
-		currentAnim = animElement->Attribute("title");
+		currentAnim = animElement->Attribute("title");  // Pobierz nazwę animacji.
 		int delay = atoi(animElement->Attribute("delay"));
-		anim.speed = 1.0 / delay; anim.sprite.setTexture(t);
+		anim.speed = 1.0 / delay; anim.sprite.setTexture(t); // Ustaw prędkość odtwarzania animacji.
 
 		TiXmlElement* cut;
 		cut = animElement->FirstChildElement("cut");
@@ -61,12 +61,12 @@ void AnimationManager::loadFromXML(std::string fileName, Texture& t)
 			int w = atoi(cut->Attribute("w"));
 			int h = atoi(cut->Attribute("h"));
 
-			anim.frames.push_back(IntRect(x, y, w, h));
-			anim.frames_flip.push_back(IntRect(x + w, y, -w, h));
+			anim.frames.push_back(IntRect(x, y, w, h)); // Dodaj klatkę do animacji.
+			anim.frames_flip.push_back(IntRect(x + w, y, -w, h)); // Dodaj odwróconą wersję klatki.
 			cut = cut->NextSiblingElement("cut");
 		}
 
-		anim.sprite.setOrigin(0, anim.frames[0].height);
+		anim.sprite.setOrigin(0, anim.frames[0].height); // Ustaw punkt początkowy rysowania.
 
 		animList[currentAnim] = anim;
 		animElement = animElement->NextSiblingElement("animation");
@@ -82,7 +82,7 @@ void AnimationManager::set(std::string name)
 void AnimationManager::draw(RenderWindow& window, int x = 0, int y = 0)
 {
 	animList[currentAnim].sprite.setPosition(x, y);
-	window.draw(animList[currentAnim].sprite);
+	window.draw(animList[currentAnim].sprite);  // Narysuj bieżącą animację w oknie.
 }
 
 void AnimationManager::flip(bool b = 1)
@@ -92,7 +92,7 @@ void AnimationManager::flip(bool b = 1)
 
 void AnimationManager::tick(float time)
 {
-	animList[currentAnim].tick(time);
+	animList[currentAnim].tick(time); // Aktualizuj bieżącą animację.
 }
 
 void AnimationManager::pause()
@@ -117,10 +117,10 @@ bool AnimationManager::isPlaying()
 
 float AnimationManager::getH()
 {
-	return animList[currentAnim].frames[0].height;
+	return animList[currentAnim].frames[0].height; // Zwróć wysokość pierwszej klatki.
 }
 
 float AnimationManager::getW()
 {
-	return animList[currentAnim].frames[0].width;
+	return animList[currentAnim].frames[0].width; // Zwróć szerokość pierwszej klatki.
 }

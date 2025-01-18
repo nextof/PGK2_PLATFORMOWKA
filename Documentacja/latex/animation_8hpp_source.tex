@@ -1,0 +1,63 @@
+\doxysection{animation.\+hpp}
+\hypertarget{animation_8hpp_source}{}\label{animation_8hpp_source}\mbox{\hyperlink{animation_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ ANIMATION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ ANIMATION\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}tinyxml.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation}{Animation}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<IntRect>\ \mbox{\hyperlink{class_animation_a4da9abfc58fda6a31d59c7d21b68ae96}{frames}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<IntRect>\ \mbox{\hyperlink{class_animation_a4ac58de9e4a1f7f4eec3005b2e426212}{frames\_flip}};\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_animation_a8aec95a73088d293d37eb0d9abe67d28}{currentFrame}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_animation_a68079384a94a0ebdba03241f1937608e}{speed}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_a951ff207e048c16b7c5dde293eb5419b}{loop}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_a4d61966b2613391372cdfd1988e6e10a}{flip}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_a0b7e0d39ac1071d1389114b56db46544}{isPlaying}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ Sprite\ \mbox{\hyperlink{class_animation_aca91057b9c31d4fa88fb73e7f06c6b89}{sprite}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{Animation}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_a40ed32ef7bf29533ed829b640bf64bbb}{tick}}(\textcolor{keywordtype}{float}\ time);}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation_manager}{AnimationManager}}}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ std::string\ \mbox{\hyperlink{class_animation_manager_a14db0a488c42509257b7b9e907c3ad36}{currentAnim}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ std::map<std::string,\ Animation>\ \mbox{\hyperlink{class_animation_manager_aaebc949668e578dcaa816b398e2c1c72}{animList}};\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_animation_manager_a1a07273c87def56cab82a1795f29f2e4}{AnimationManager}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_animation_manager_a3a8c725f2aa41692ed7ec4ef0957c365}{\string~AnimationManager}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_a4187aa6cea56e4714c88336fa4b3418f}{loadFromXML}}(std::string\ fileName,\ Texture\&\ t);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_a8db8f3b7c4113ffc623be5a7e310c3c8}{set}}(std::string\ name);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_a2cc526e9151b302686a5e4ee74b508f9}{draw}}(RenderWindow\&\ window,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_a6afcde12e65c40c002c851df294bd4f4}{flip}}(\textcolor{keywordtype}{bool}\ b);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_a60b2e6524eaabf101c4571744f5d2f0c}{tick}}(\textcolor{keywordtype}{float}\ time);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_ab5fef9a92d8e986d0e133537ade21868}{pause}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_afd825540efab75c560019eeedf3ac8f5}{play}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_manager_afd825540efab75c560019eeedf3ac8f5}{play}}(std::string\ name);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_manager_a191135efa36385ec980f492399d6fb62}{isPlaying}}();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_animation_manager_a8d473eb750e2753d7b95ab5b3398a509}{getH}}();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_animation_manager_ab4a37886a538691fabe6a7e952bb919c}{getW}}();}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ANIMATION\_H}}
+
+\end{DoxyCode}

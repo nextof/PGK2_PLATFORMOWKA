@@ -1,0 +1,266 @@
+\doxysection{Entity Class Reference}
+\hypertarget{class_entity}{}\label{class_entity}\index{Entity@{Entity}}
+
+
+Klasa bazowa dla wszystkich obiektów gry.  
+
+
+
+
+{\ttfamily \#include $<$entity.\+hpp$>$}
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.367521cm]{class_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_aa0f89b20cbb7169ee85ccbb5fa882e4c}{Entity}} (\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&A, int X, int Y)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a2dec8c8ca1cf137d05a7d910e7b01f7b}{update}} (float time)=0
+\begin{DoxyCompactList}\small\item\em Wirtualna metoda aktualizująca stan obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a1c18bc58da8e329a0da5d74453e55fd2}{draw}} (Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Rysuje obiekt na ekranie. \end{DoxyCompactList}\item 
+Float\+Rect \mbox{\hyperlink{class_entity_a38630f17b0492a9d050aef2d607f4dea}{get\+Rect}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera prostokąt kolizji obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_abe3e38fc4be7170845fa9d3956e15782}{option}} (std\+::string NAME, float SPEED, std\+::string FIRST\+\_\+\+ANIM)
+\begin{DoxyCompactList}\small\item\em Ustawia opcje dla obiektu. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}}
+\item 
+float \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}}
+\item 
+float \mbox{\hyperlink{class_entity_a182c63e0b0bedf2159e47b019d769ec4}{dx}}
+\item 
+float \mbox{\hyperlink{class_entity_ade4d0d757640434826ba88607f1af535}{dy}}
+\item 
+float \mbox{\hyperlink{class_entity_a4cf0936f4349e066097cf40cf17a6ef4}{w}}
+\item 
+float \mbox{\hyperlink{class_entity_a060bc83a062f686b270cfe208d292d0e}{h}}
+\item 
+\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \mbox{\hyperlink{class_entity_af6e3b2a9fd106f05c8a5dfab1a4de674}{anim}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ \mbox{\hyperlink{class_entity_ac1c4ea97ac42e673e1b3c581e19708b5}{obj}}
+\item 
+bool \mbox{\hyperlink{class_entity_a6705d3a1fa7425b3a6f9704603e2c46e}{life}}
+\item 
+bool \mbox{\hyperlink{class_entity_a0867f766d6b1eb8bcfeafff48fd9ea42}{dir}}
+\item 
+float \mbox{\hyperlink{class_entity_a15b57d90cfb0c1f666d2a6b2318aabad}{timer}}
+\item 
+float \mbox{\hyperlink{class_entity_a0dcf918ad770f6245b812dfbd82f5426}{timer\+\_\+end}}
+\item 
+std\+::string \mbox{\hyperlink{class_entity_ae8f30f7e882096be1fe49167a16d8611}{Name}}
+\item 
+bool \mbox{\hyperlink{class_entity_aa7ed90c2614fa44d37c0233d12816080}{is\+Dead}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa bazowa dla wszystkich obiektów gry. 
+
+Klasa abstrakcyjna, która definiuje podstawowe właściwości i metody wspólne dla wszystkich obiektów gry, takich jak pozycja, wymiary, kolizje, animacje i stan życia. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_entity_aa0f89b20cbb7169ee85ccbb5fa882e4c}\label{class_entity_aa0f89b20cbb7169ee85ccbb5fa882e4c} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&}]{A,  }\item[{int}]{X,  }\item[{int}]{Y }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_entity}{Entity}. 
+
+Inicjalizuje obiekt na podstawie animacji oraz początkowej pozycji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & Obiekt \doxylink{class_animation_manager}{Animation\+Manager} zarządzający animacjami obiektu. \\
+\hline
+{\em X} & Początkowa współrzędna X obiektu. \\
+\hline
+{\em Y} & Początkowa współrzędna Y obiektu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}\label{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae} 
+\index{Entity@{Entity}!````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}}
+\index{````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Entity()}{\string~Entity()}}
+{\footnotesize\ttfamily Entity\+::\texorpdfstring{$\sim$}{\string~}\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destruktor klasy \doxylink{class_entity}{Entity}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_entity_a1c18bc58da8e329a0da5d74453e55fd2}\label{class_entity_a1c18bc58da8e329a0da5d74453e55fd2} 
+\index{Entity@{Entity}!draw@{draw}}
+\index{draw@{draw}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Entity\+::draw (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Rysuje obiekt na ekranie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Obiekt Render\+Window, w którym rysowany jest obiekt. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_entity_a38630f17b0492a9d050aef2d607f4dea}\label{class_entity_a38630f17b0492a9d050aef2d607f4dea} 
+\index{Entity@{Entity}!getRect@{getRect}}
+\index{getRect@{getRect}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getRect()}{getRect()}}
+{\footnotesize\ttfamily Float\+Rect Entity\+::get\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobiera prostokąt kolizji obiektu. 
+
+\begin{DoxyReturn}{Returns}
+Float\+Rect Prostokąt opisujący obszar kolizji obiektu. 
+\end{DoxyReturn}
+\Hypertarget{class_entity_abe3e38fc4be7170845fa9d3956e15782}\label{class_entity_abe3e38fc4be7170845fa9d3956e15782} 
+\index{Entity@{Entity}!option@{option}}
+\index{option@{option}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{option()}{option()}}
+{\footnotesize\ttfamily void Entity\+::option (\begin{DoxyParamCaption}\item[{std\+::string}]{NAME,  }\item[{float}]{SPEED = {\ttfamily 0},  }\item[{std\+::string}]{FIRST\+\_\+\+ANIM = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Ustawia opcje dla obiektu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em NAME} & Nazwa obiektu. \\
+\hline
+{\em SPEED} & Szybkość poruszania się obiektu. \\
+\hline
+{\em FIRST\+\_\+\+ANIM} & Nazwa początkowej animacji obiektu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_entity_a2dec8c8ca1cf137d05a7d910e7b01f7b}\label{class_entity_a2dec8c8ca1cf137d05a7d910e7b01f7b} 
+\index{Entity@{Entity}!update@{update}}
+\index{update@{update}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Entity\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Wirtualna metoda aktualizująca stan obiektu. 
+
+Funkcja musi być zdefiniowana w klasach dziedziczących.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas, który upłynął od ostatniej aktualizacji. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_coin_aa71fb921a83062e6c43ca0fb6e108f62}{Coin}}, \mbox{\hyperlink{class_enemy_a56a41cd549d466f48e1782e2c7411eb9}{Enemy}}, \mbox{\hyperlink{class_moving_platform_a05f8e4bc0d84149633450178ac878bf9}{Moving\+Platform}}, \mbox{\hyperlink{class_moving_platform_y_aa25fc958b7a0a1d9b2c62403cf48dff0}{Moving\+PlatformY}}, \mbox{\hyperlink{class_next_level_ab18ece516302439381158b74bb6a6af8}{Next\+Level}}, \mbox{\hyperlink{class_player_a194b7082791d882887071d8d2893c5e4}{Player}}, and \mbox{\hyperlink{class_spikes_aef1c28668c3c00a7c4e74900fe73dae1}{Spikes}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_entity_af6e3b2a9fd106f05c8a5dfab1a4de674}\label{class_entity_af6e3b2a9fd106f05c8a5dfab1a4de674} 
+\index{Entity@{Entity}!anim@{anim}}
+\index{anim@{anim}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{anim}{anim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} Entity\+::anim}
+
+Menedżer animacji przypisany do obiektu. \Hypertarget{class_entity_a0867f766d6b1eb8bcfeafff48fd9ea42}\label{class_entity_a0867f766d6b1eb8bcfeafff48fd9ea42} 
+\index{Entity@{Entity}!dir@{dir}}
+\index{dir@{dir}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily bool Entity\+::dir}
+
+Kierunek poruszania się obiektu. \Hypertarget{class_entity_a182c63e0b0bedf2159e47b019d769ec4}\label{class_entity_a182c63e0b0bedf2159e47b019d769ec4} 
+\index{Entity@{Entity}!dx@{dx}}
+\index{dx@{dx}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily float Entity\+::dx}
+
+Prędkość w osi X. \Hypertarget{class_entity_ade4d0d757640434826ba88607f1af535}\label{class_entity_ade4d0d757640434826ba88607f1af535} 
+\index{Entity@{Entity}!dy@{dy}}
+\index{dy@{dy}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily float Entity\+::dy}
+
+Prędkość w osi Y. \Hypertarget{class_entity_a060bc83a062f686b270cfe208d292d0e}\label{class_entity_a060bc83a062f686b270cfe208d292d0e} 
+\index{Entity@{Entity}!h@{h}}
+\index{h@{h}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily float Entity\+::h}
+
+Wysokość obiektu. \Hypertarget{class_entity_aa7ed90c2614fa44d37c0233d12816080}\label{class_entity_aa7ed90c2614fa44d37c0233d12816080} 
+\index{Entity@{Entity}!isDead@{isDead}}
+\index{isDead@{isDead}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{isDead}{isDead}}
+{\footnotesize\ttfamily bool Entity\+::is\+Dead}
+
+Flaga określająca, czy obiekt jest martwy. \Hypertarget{class_entity_a6705d3a1fa7425b3a6f9704603e2c46e}\label{class_entity_a6705d3a1fa7425b3a6f9704603e2c46e} 
+\index{Entity@{Entity}!life@{life}}
+\index{life@{life}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{life}{life}}
+{\footnotesize\ttfamily bool Entity\+::life}
+
+Flaga określająca, czy obiekt jest aktywny (żyje). \Hypertarget{class_entity_ae8f30f7e882096be1fe49167a16d8611}\label{class_entity_ae8f30f7e882096be1fe49167a16d8611} 
+\index{Entity@{Entity}!Name@{Name}}
+\index{Name@{Name}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily std\+::string Entity\+::\+Name}
+
+Nazwa obiektu. \Hypertarget{class_entity_ac1c4ea97ac42e673e1b3c581e19708b5}\label{class_entity_ac1c4ea97ac42e673e1b3c581e19708b5} 
+\index{Entity@{Entity}!obj@{obj}}
+\index{obj@{obj}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{obj}{obj}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_object}{Object}}$>$ Entity\+::obj}
+
+Obiekty z poziomu gry, z którymi może wchodzić w interakcję. \Hypertarget{class_entity_a15b57d90cfb0c1f666d2a6b2318aabad}\label{class_entity_a15b57d90cfb0c1f666d2a6b2318aabad} 
+\index{Entity@{Entity}!timer@{timer}}
+\index{timer@{timer}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily float Entity\+::timer}
+
+Licznik czasu używany do różnych działań. \Hypertarget{class_entity_a0dcf918ad770f6245b812dfbd82f5426}\label{class_entity_a0dcf918ad770f6245b812dfbd82f5426} 
+\index{Entity@{Entity}!timer\_end@{timer\_end}}
+\index{timer\_end@{timer\_end}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{timer\_end}{timer\_end}}
+{\footnotesize\ttfamily float Entity\+::timer\+\_\+end}
+
+Czas końcowy do określonych zdarzeń. \Hypertarget{class_entity_a4cf0936f4349e066097cf40cf17a6ef4}\label{class_entity_a4cf0936f4349e066097cf40cf17a6ef4} 
+\index{Entity@{Entity}!w@{w}}
+\index{w@{w}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily float Entity\+::w}
+
+Szerokość obiektu. \Hypertarget{class_entity_abc2d19ee6ff26b8520428894da6a8f68}\label{class_entity_abc2d19ee6ff26b8520428894da6a8f68} 
+\index{Entity@{Entity}!x@{x}}
+\index{x@{x}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Entity\+::x}
+
+Współrzędna X obiektu. \Hypertarget{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}\label{class_entity_af4966f81d91cc8f8d5eb9e9002240c49} 
+\index{Entity@{Entity}!y@{y}}
+\index{y@{y}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Entity\+::y}
+
+Współrzędna Y obiektu. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{entity_8hpp}{entity.\+hpp}}\item 
+\mbox{\hyperlink{entity_8cpp}{entity.\+cpp}}\end{DoxyCompactItemize}

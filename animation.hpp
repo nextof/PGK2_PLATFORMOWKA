@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef ANIMATION_H
 #define ANIMATION_H
 
@@ -7,52 +7,132 @@
 
 using namespace sf;
 
+/**
+ * @file animation.h
+ * @brief Deklaracja klas Animation oraz AnimationManager do zarządzania animacjami w grze.
+ */
+
+ /**
+  * @class Animation
+  * @brief Klasa reprezentująca pojedynczą animację.
+  *
+  * Przechowuje informacje o klatkach animacji, szybkości odtwarzania,
+  * orientacji (normalna/odwrócona) oraz stan odtwarzania.
+  */
 class Animation
 {
 public:
-	std::vector<IntRect> frames, frames_flip;
-	float currentFrame, speed;
-	bool loop, flip, isPlaying;
-	Sprite sprite;
+    std::vector<IntRect> frames;        /**< Wektory klatek animacji. */
+    std::vector<IntRect> frames_flip;  /**< Wektory klatek odwróconych animacji. */
+    float currentFrame;                /**< Aktualna klatka animacji. */
+    float speed;                       /**< Szybkość odtwarzania animacji. */
+    bool loop;                         /**< Czy animacja jest zapętlona. */
+    bool flip;                         /**< Czy animacja jest odwrócona. */
+    bool isPlaying;                    /**< Czy animacja jest aktualnie odtwarzana. */
+    Sprite sprite;                     /**< Obiekt Sprite używany do wyświetlania animacji. */
 
-	Animation();
-	void tick(float time);
+    /**
+     * @brief Konstruktor domyślny klasy Animation.
+     */
+    Animation();
 
+    /**
+     * @brief Aktualizuje stan animacji na podstawie upływu czasu.
+     * @param time Czas, który upłynął od ostatniej aktualizacji.
+     */
+    void tick(float time);
 };
 
+/**
+ * @class AnimationManager
+ * @brief Klasa zarządzająca wieloma animacjami.
+ *
+ * Umożliwia wczytywanie animacji z pliku XML, zarządzanie ich stanami
+ * i rysowanie na ekranie.
+ */
 class AnimationManager
 {
-
 public:
-	std::string currentAnim;
-	std::map<std::string, Animation> animList;
+    std::string currentAnim;                    /**< Nazwa aktualnie odtwarzanej animacji. */
+    std::map<std::string, Animation> animList; /**< Lista wszystkich animacji. */
 
-	AnimationManager();
+    /**
+     * @brief Konstruktor domyślny klasy AnimationManager.
+     */
+    AnimationManager();
 
-	~AnimationManager();
+    /**
+     * @brief Destruktor klasy AnimationManager.
+     */
+    ~AnimationManager();
 
-	void loadFromXML(std::string fileName, Texture& t);
+    /**
+     * @brief Wczytuje animacje z pliku XML.
+     * @param fileName Ścieżka do pliku XML z definicją animacji.
+     * @param t Tekstura używana przez animacje.
+     */
+    void loadFromXML(std::string fileName, Texture& t);
 
-	void set(std::string name);
+    /**
+     * @brief Ustawia aktualną animację na podstawie jej nazwy.
+     * @param name Nazwa animacji.
+     */
+    void set(std::string name);
 
-	void draw(RenderWindow& window, int x, int y);
+    /**
+     * @brief Rysuje aktualną animację w oknie gry.
+     * @param window Obiekt RenderWindow, w którym animacja będzie rysowana.
+     * @param x Pozycja X rysowanej animacji.
+     * @param y Pozycja Y rysowanej animacji.
+     */
+    void draw(RenderWindow& window, int x, int y);
 
-	void flip(bool b);
+    /**
+     * @brief Ustawia, czy animacja ma być odwrócona.
+     * @param b Wartość logiczna wskazująca odwrócenie.
+     */
+    void flip(bool b);
 
-	void tick(float time);
+    /**
+     * @brief Aktualizuje stan animacji na podstawie upływu czasu.
+     * @param time Czas, który upłynął od ostatniej aktualizacji.
+     */
+    void tick(float time);
 
-	void pause();
+    /**
+     * @brief Zatrzymuje aktualną animację.
+     */
+    void pause();
 
-	void play();
+    /**
+     * @brief Wznawia odtwarzanie aktualnej animacji.
+     */
+    void play();
 
-	void play(std::string name);
+    /**
+     * @brief Odtwarza wskazaną animację.
+     * @param name Nazwa animacji do odtworzenia.
+     */
+    void play(std::string name);
 
-	bool isPlaying();
+    /**
+     * @brief Sprawdza, czy aktualna animacja jest odtwarzana.
+     * @return true Jeśli animacja jest odtwarzana.
+     * @return false Jeśli animacja jest zatrzymana.
+     */
+    bool isPlaying();
 
-	float getH();
+    /**
+     * @brief Pobiera wysokość aktualnej animacji.
+     * @return float Wysokość animacji.
+     */
+    float getH();
 
-	float getW();
-
+    /**
+     * @brief Pobiera szerokość aktualnej animacji.
+     * @return float Szerokość animacji.
+     */
+    float getW();
 };
 
-#endif ANIMATION_H
+#endif // ANIMATION_H

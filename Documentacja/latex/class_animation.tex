@@ -1,0 +1,130 @@
+\doxysection{Animation Class Reference}
+\hypertarget{class_animation}{}\label{class_animation}\index{Animation@{Animation}}
+
+
+Klasa reprezentująca pojedynczą animację.  
+
+
+
+
+{\ttfamily \#include $<$animation.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{Animation}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny klasy \doxylink{class_animation}{Animation}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a40ed32ef7bf29533ed829b640bf64bbb}{tick}} (float time)
+\begin{DoxyCompactList}\small\item\em Aktualizuje stan animacji na podstawie upływu czasu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Int\+Rect $>$ \mbox{\hyperlink{class_animation_a4da9abfc58fda6a31d59c7d21b68ae96}{frames}}
+\item 
+std\+::vector$<$ Int\+Rect $>$ \mbox{\hyperlink{class_animation_a4ac58de9e4a1f7f4eec3005b2e426212}{frames\+\_\+flip}}
+\item 
+float \mbox{\hyperlink{class_animation_a8aec95a73088d293d37eb0d9abe67d28}{current\+Frame}}
+\item 
+float \mbox{\hyperlink{class_animation_a68079384a94a0ebdba03241f1937608e}{speed}}
+\item 
+bool \mbox{\hyperlink{class_animation_a951ff207e048c16b7c5dde293eb5419b}{loop}}
+\item 
+bool \mbox{\hyperlink{class_animation_a4d61966b2613391372cdfd1988e6e10a}{flip}}
+\item 
+bool \mbox{\hyperlink{class_animation_a0b7e0d39ac1071d1389114b56db46544}{is\+Playing}}
+\item 
+Sprite \mbox{\hyperlink{class_animation_aca91057b9c31d4fa88fb73e7f06c6b89}{sprite}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca pojedynczą animację. 
+
+Przechowuje informacje o klatkach animacji, szybkości odtwarzania, orientacji (normalna/odwrócona) oraz stan odtwarzania. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_animation_a83f0a16cef7117f187ad596de38dd9d6}\label{class_animation_a83f0a16cef7117f187ad596de38dd9d6} 
+\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily Animation\+::\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny klasy \doxylink{class_animation}{Animation}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animation_a40ed32ef7bf29533ed829b640bf64bbb}\label{class_animation_a40ed32ef7bf29533ed829b640bf64bbb} 
+\index{Animation@{Animation}!tick@{tick}}
+\index{tick@{tick}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void Animation\+::tick (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+
+
+Aktualizuje stan animacji na podstawie upływu czasu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas, który upłynął od ostatniej aktualizacji. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_animation_a8aec95a73088d293d37eb0d9abe67d28}\label{class_animation_a8aec95a73088d293d37eb0d9abe67d28} 
+\index{Animation@{Animation}!currentFrame@{currentFrame}}
+\index{currentFrame@{currentFrame}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{currentFrame}{currentFrame}}
+{\footnotesize\ttfamily float Animation\+::current\+Frame}
+
+Aktualna klatka animacji. \Hypertarget{class_animation_a4d61966b2613391372cdfd1988e6e10a}\label{class_animation_a4d61966b2613391372cdfd1988e6e10a} 
+\index{Animation@{Animation}!flip@{flip}}
+\index{flip@{flip}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{flip}{flip}}
+{\footnotesize\ttfamily bool Animation\+::flip}
+
+Czy animacja jest odwrócona. \Hypertarget{class_animation_a4da9abfc58fda6a31d59c7d21b68ae96}\label{class_animation_a4da9abfc58fda6a31d59c7d21b68ae96} 
+\index{Animation@{Animation}!frames@{frames}}
+\index{frames@{frames}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{frames}{frames}}
+{\footnotesize\ttfamily std\+::vector$<$Int\+Rect$>$ Animation\+::frames}
+
+Wektory klatek animacji. \Hypertarget{class_animation_a4ac58de9e4a1f7f4eec3005b2e426212}\label{class_animation_a4ac58de9e4a1f7f4eec3005b2e426212} 
+\index{Animation@{Animation}!frames\_flip@{frames\_flip}}
+\index{frames\_flip@{frames\_flip}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{frames\_flip}{frames\_flip}}
+{\footnotesize\ttfamily std\+::vector$<$Int\+Rect$>$ Animation\+::frames\+\_\+flip}
+
+Wektory klatek odwróconych animacji. \Hypertarget{class_animation_a0b7e0d39ac1071d1389114b56db46544}\label{class_animation_a0b7e0d39ac1071d1389114b56db46544} 
+\index{Animation@{Animation}!isPlaying@{isPlaying}}
+\index{isPlaying@{isPlaying}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{isPlaying}{isPlaying}}
+{\footnotesize\ttfamily bool Animation\+::is\+Playing}
+
+Czy animacja jest aktualnie odtwarzana. \Hypertarget{class_animation_a951ff207e048c16b7c5dde293eb5419b}\label{class_animation_a951ff207e048c16b7c5dde293eb5419b} 
+\index{Animation@{Animation}!loop@{loop}}
+\index{loop@{loop}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily bool Animation\+::loop}
+
+Czy animacja jest zapętlona. \Hypertarget{class_animation_a68079384a94a0ebdba03241f1937608e}\label{class_animation_a68079384a94a0ebdba03241f1937608e} 
+\index{Animation@{Animation}!speed@{speed}}
+\index{speed@{speed}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Animation\+::speed}
+
+Szybkość odtwarzania animacji. \Hypertarget{class_animation_aca91057b9c31d4fa88fb73e7f06c6b89}\label{class_animation_aca91057b9c31d4fa88fb73e7f06c6b89} 
+\index{Animation@{Animation}!sprite@{sprite}}
+\index{sprite@{sprite}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily Sprite Animation\+::sprite}
+
+Obiekt Sprite używany do wyświetlania animacji. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{animation_8hpp}{animation.\+hpp}}\item 
+\mbox{\hyperlink{animation_8cpp}{animation.\+cpp}}\end{DoxyCompactItemize}

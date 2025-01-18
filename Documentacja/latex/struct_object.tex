@@ -1,0 +1,134 @@
+\doxysection{Object Struct Reference}
+\hypertarget{struct_object}{}\label{struct_object}\index{Object@{Object}}
+
+
+Reprezentuje pojedynczy obiekt na poziomie.  
+
+
+
+
+{\ttfamily \#include $<$level.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_object_a3508bb776edb1139d41c10c1302a532a}{Get\+Property\+Int}} (std\+::string \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}})
+\begin{DoxyCompactList}\small\item\em Pobiera wartość właściwości jako int. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_object_addc3379119fd3cc698ff466c9d371f30}{Get\+Property\+Float}} (std\+::string \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}})
+\begin{DoxyCompactList}\small\item\em Pobiera wartość właściwości jako float. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_object_a3979e6a58390fb4244535f320a3e5db8}{Get\+Property\+String}} (std\+::string \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}})
+\begin{DoxyCompactList}\small\item\em Pobiera wartość właściwości jako string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{struct_object_a24457e0a387492c80594aec7681a2277}{name}}
+\item 
+std\+::string \mbox{\hyperlink{struct_object_a2f0ab0ca2d98028fd10807a03fcd75e5}{type}}
+\item 
+sf\+::\+Rect$<$ float $>$ \mbox{\hyperlink{struct_object_a6d0f620ca560913148b2e56f7e5d424a}{rect}}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{struct_object_af4ca2590a9451ea032eb5aa1f7c799a0}{properties}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{struct_object_a65be09abc56e93e0154c3a0e37f97579}{sprite}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reprezentuje pojedynczy obiekt na poziomie. 
+
+Obiekt może zawierać właściwości, takie jak nazwa, typ, pozycja oraz dodatkowe parametry. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_object_addc3379119fd3cc698ff466c9d371f30}\label{struct_object_addc3379119fd3cc698ff466c9d371f30} 
+\index{Object@{Object}!GetPropertyFloat@{GetPropertyFloat}}
+\index{GetPropertyFloat@{GetPropertyFloat}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetPropertyFloat()}{GetPropertyFloat()}}
+{\footnotesize\ttfamily float Object\+::\+Get\+Property\+Float (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Pobiera wartość właściwości jako float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa właściwości. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wartość właściwości jako float. 
+\end{DoxyReturn}
+\Hypertarget{struct_object_a3508bb776edb1139d41c10c1302a532a}\label{struct_object_a3508bb776edb1139d41c10c1302a532a} 
+\index{Object@{Object}!GetPropertyInt@{GetPropertyInt}}
+\index{GetPropertyInt@{GetPropertyInt}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetPropertyInt()}{GetPropertyInt()}}
+{\footnotesize\ttfamily int Object\+::\+Get\+Property\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Pobiera wartość właściwości jako int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa właściwości. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wartość właściwości jako int. 
+\end{DoxyReturn}
+\Hypertarget{struct_object_a3979e6a58390fb4244535f320a3e5db8}\label{struct_object_a3979e6a58390fb4244535f320a3e5db8} 
+\index{Object@{Object}!GetPropertyString@{GetPropertyString}}
+\index{GetPropertyString@{GetPropertyString}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{GetPropertyString()}{GetPropertyString()}}
+{\footnotesize\ttfamily std\+::string Object\+::\+Get\+Property\+String (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Pobiera wartość właściwości jako string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa właściwości. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wartość właściwości jako string. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_object_a24457e0a387492c80594aec7681a2277}\label{struct_object_a24457e0a387492c80594aec7681a2277} 
+\index{Object@{Object}!name@{name}}
+\index{name@{name}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Object\+::name}
+
+Nazwa obiektu. \Hypertarget{struct_object_af4ca2590a9451ea032eb5aa1f7c799a0}\label{struct_object_af4ca2590a9451ea032eb5aa1f7c799a0} 
+\index{Object@{Object}!properties@{properties}}
+\index{properties@{properties}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{properties}{properties}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Object\+::properties}
+
+Mapa właściwości obiektu. \Hypertarget{struct_object_a6d0f620ca560913148b2e56f7e5d424a}\label{struct_object_a6d0f620ca560913148b2e56f7e5d424a} 
+\index{Object@{Object}!rect@{rect}}
+\index{rect@{rect}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily sf\+::\+Rect$<$float$>$ Object\+::rect}
+
+Prostokąt określający pozycję i rozmiar obiektu. \Hypertarget{struct_object_a65be09abc56e93e0154c3a0e37f97579}\label{struct_object_a65be09abc56e93e0154c3a0e37f97579} 
+\index{Object@{Object}!sprite@{sprite}}
+\index{sprite@{sprite}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{sprite}{sprite}}
+{\footnotesize\ttfamily sf\+::\+Sprite Object\+::sprite}
+
+Sprite reprezentujący obiekt graficznie. \Hypertarget{struct_object_a2f0ab0ca2d98028fd10807a03fcd75e5}\label{struct_object_a2f0ab0ca2d98028fd10807a03fcd75e5} 
+\index{Object@{Object}!type@{type}}
+\index{type@{type}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily std\+::string Object\+::type}
+
+Typ obiektu. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{level_8hpp}{level.\+hpp}}\item 
+\mbox{\hyperlink{level_8cpp}{level.\+cpp}}\end{DoxyCompactItemize}

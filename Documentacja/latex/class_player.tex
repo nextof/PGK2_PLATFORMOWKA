@@ -1,0 +1,305 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Klasa reprezentująca gracza w grze.  
+
+
+
+
+{\ttfamily \#include $<$player.\+hpp$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{class_player_a53205b77fc29c601a2cfaa7178812082a82d28ed7a049f51da77a54e279b76201}{stay}}
+, \mbox{\hyperlink{class_player_a53205b77fc29c601a2cfaa7178812082a953285412ecf97f63d2a975bbe64d216}{walk}}
+, \mbox{\hyperlink{class_player_a53205b77fc29c601a2cfaa7178812082a20e4a8eaac1201f8bae32656f0b2d9db}{jump}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_aeb5e4390668b29ad129c2e75dd531c24}{Player}} (\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&a, \mbox{\hyperlink{class_level}{Level}} \&lev, int \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}}, int \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a12ca9a126ede30c6806c416cc2a15531}{Keyboard}} ()
+\begin{DoxyCompactList}\small\item\em Obsługuje wciśnięcia klawiszy przez gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ada2132622cb96415afad9ed38e7ae7d5}{Animation}} (float time)
+\begin{DoxyCompactList}\small\item\em Aktualizuje animacje gracza na podstawie stanu i czasu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a194b7082791d882887071d8d2893c5e4}{update}} (float time)
+\begin{DoxyCompactList}\small\item\em Aktualizuje stan gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a1cce87a1381fe1ec443ec9bb3d60be02}{Collision}} (int num)
+\begin{DoxyCompactList}\small\item\em Obsługuje kolizje gracza z innymi obiektami. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_aeb43840d6cec601bc3798e751624a0e2}{get\+Life}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera liczbę żyć gracza. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a244fafe6143720247572f473dafb17ba}{minus\+Life}} ()
+\begin{DoxyCompactList}\small\item\em Zmniejsza liczbę żyć gracza o 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ab7d94f1b8b6a29decc00cca41b13cab3}{add\+Life}} ()
+\begin{DoxyCompactList}\small\item\em Zwiększa liczbę żyć gracza o 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_aa0f89b20cbb7169ee85ccbb5fa882e4c}{Entity}} (\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&A, int X, int Y)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a1c18bc58da8e329a0da5d74453e55fd2}{draw}} (Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Rysuje obiekt na ekranie. \end{DoxyCompactList}\item 
+Float\+Rect \mbox{\hyperlink{class_entity_a38630f17b0492a9d050aef2d607f4dea}{get\+Rect}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera prostokąt kolizji obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_abe3e38fc4be7170845fa9d3956e15782}{option}} (std\+::string NAME, float SPEED, std\+::string FIRST\+\_\+\+ANIM)
+\begin{DoxyCompactList}\small\item\em Ustawia opcje dla obiektu. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+enum Player\+:: \{ ... \}  \mbox{\hyperlink{class_player_ae698c01043483722dcf6c2cb54e5ece4}{STATE}}
+\item 
+int \mbox{\hyperlink{class_player_ab8fcb64fc827192e48d388efc2d7c2ef}{cash}}
+\item 
+float \mbox{\hyperlink{class_player_a228e653dae4b061e17a2118699b150cc}{sx}}
+\item 
+float \mbox{\hyperlink{class_player_a1407bd2fbd22b54bd944f52d58ed6f6d}{sy}}
+\item 
+std\+::map$<$ std\+::string, bool $>$ \mbox{\hyperlink{class_player_addf1269f90166e298d38d0c6ee2be740}{key}}
+\item 
+int \mbox{\hyperlink{class_player_a505c5da08bfb03d355b964dfceb3284d}{life}}
+\item 
+float \mbox{\hyperlink{class_player_a32af155f20f8eca16c17639d46c184dc}{life\+Cooldown}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}}
+\item 
+float \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}}
+\item 
+float \mbox{\hyperlink{class_entity_a182c63e0b0bedf2159e47b019d769ec4}{dx}}
+\item 
+float \mbox{\hyperlink{class_entity_ade4d0d757640434826ba88607f1af535}{dy}}
+\item 
+float \mbox{\hyperlink{class_entity_a4cf0936f4349e066097cf40cf17a6ef4}{w}}
+\item 
+float \mbox{\hyperlink{class_entity_a060bc83a062f686b270cfe208d292d0e}{h}}
+\item 
+\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \mbox{\hyperlink{class_entity_af6e3b2a9fd106f05c8a5dfab1a4de674}{anim}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ \mbox{\hyperlink{class_entity_ac1c4ea97ac42e673e1b3c581e19708b5}{obj}}
+\item 
+bool \mbox{\hyperlink{class_entity_a6705d3a1fa7425b3a6f9704603e2c46e}{life}}
+\item 
+bool \mbox{\hyperlink{class_entity_a0867f766d6b1eb8bcfeafff48fd9ea42}{dir}}
+\item 
+float \mbox{\hyperlink{class_entity_a15b57d90cfb0c1f666d2a6b2318aabad}{timer}}
+\item 
+float \mbox{\hyperlink{class_entity_a0dcf918ad770f6245b812dfbd82f5426}{timer\+\_\+end}}
+\item 
+std\+::string \mbox{\hyperlink{class_entity_ae8f30f7e882096be1fe49167a16d8611}{Name}}
+\item 
+bool \mbox{\hyperlink{class_entity_aa7ed90c2614fa44d37c0233d12816080}{is\+Dead}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca gracza w grze. 
+
+Dziedziczy po klasie \doxylink{class_entity}{Entity}. Odpowiada za logikę ruchu, kolizji oraz interakcji gracza z otoczeniem w grze. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_player_a53205b77fc29c601a2cfaa7178812082}\label{class_player_a53205b77fc29c601a2cfaa7178812082} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stay@{stay}!Player@{Player}}\index{Player@{Player}!stay@{stay}}}\Hypertarget{class_player_a53205b77fc29c601a2cfaa7178812082a82d28ed7a049f51da77a54e279b76201}\label{class_player_a53205b77fc29c601a2cfaa7178812082a82d28ed7a049f51da77a54e279b76201} 
+stay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{walk@{walk}!Player@{Player}}\index{Player@{Player}!walk@{walk}}}\Hypertarget{class_player_a53205b77fc29c601a2cfaa7178812082a953285412ecf97f63d2a975bbe64d216}\label{class_player_a53205b77fc29c601a2cfaa7178812082a953285412ecf97f63d2a975bbe64d216} 
+walk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{jump@{jump}!Player@{Player}}\index{Player@{Player}!jump@{jump}}}\Hypertarget{class_player_a53205b77fc29c601a2cfaa7178812082a20e4a8eaac1201f8bae32656f0b2d9db}\label{class_player_a53205b77fc29c601a2cfaa7178812082a20e4a8eaac1201f8bae32656f0b2d9db} 
+jump&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_aeb5e4390668b29ad129c2e75dd531c24}\label{class_player_aeb5e4390668b29ad129c2e75dd531c24} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&}]{a,  }\item[{\mbox{\hyperlink{class_level}{Level}} \&}]{lev,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_player}{Player}. 
+
+Tworzy obiekt gracza, ustawiając animacje, pozycję oraz poziom, na którym się znajduje.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Obiekt \doxylink{class_animation_manager}{Animation\+Manager} zarządzający animacjami gracza. \\
+\hline
+{\em lev} & Obiekt \doxylink{class_level}{Level} reprezentujący poziom, na którym gracz się znajduje. \\
+\hline
+{\em x} & Początkowa współrzędna X gracza. \\
+\hline
+{\em y} & Początkowa współrzędna Y gracza. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_ab7d94f1b8b6a29decc00cca41b13cab3}\label{class_player_ab7d94f1b8b6a29decc00cca41b13cab3} 
+\index{Player@{Player}!addLife@{addLife}}
+\index{addLife@{addLife}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{addLife()}{addLife()}}
+{\footnotesize\ttfamily void Player\+::add\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwiększa liczbę żyć gracza o 1. 
+
+\Hypertarget{class_player_ada2132622cb96415afad9ed38e7ae7d5}\label{class_player_ada2132622cb96415afad9ed38e7ae7d5} 
+\index{Player@{Player}!Animation@{Animation}}
+\index{Animation@{Animation}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily void Player\+::\+Animation (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})}
+
+
+
+Aktualizuje animacje gracza na podstawie stanu i czasu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas, który upłynął od ostatniej aktualizacji. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a1cce87a1381fe1ec443ec9bb3d60be02}\label{class_player_a1cce87a1381fe1ec443ec9bb3d60be02} 
+\index{Player@{Player}!Collision@{Collision}}
+\index{Collision@{Collision}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Collision()}{Collision()}}
+{\footnotesize\ttfamily void Player\+::\+Collision (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Obsługuje kolizje gracza z innymi obiektami. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Numer identyfikujący typ kolizji. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_aeb43840d6cec601bc3798e751624a0e2}\label{class_player_aeb43840d6cec601bc3798e751624a0e2} 
+\index{Player@{Player}!getLife@{getLife}}
+\index{getLife@{getLife}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getLife()}{getLife()}}
+{\footnotesize\ttfamily int Player\+::get\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobiera liczbę żyć gracza. 
+
+\begin{DoxyReturn}{Returns}
+int Liczba żyć gracza. 
+\end{DoxyReturn}
+\Hypertarget{class_player_a12ca9a126ede30c6806c416cc2a15531}\label{class_player_a12ca9a126ede30c6806c416cc2a15531} 
+\index{Player@{Player}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Keyboard()}{Keyboard()}}
+{\footnotesize\ttfamily void Player\+::\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obsługuje wciśnięcia klawiszy przez gracza. 
+
+Funkcja rejestruje i przetwarza stany klawiszy sterujących ruchem gracza. \Hypertarget{class_player_a244fafe6143720247572f473dafb17ba}\label{class_player_a244fafe6143720247572f473dafb17ba} 
+\index{Player@{Player}!minusLife@{minusLife}}
+\index{minusLife@{minusLife}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{minusLife()}{minusLife()}}
+{\footnotesize\ttfamily void Player\+::minus\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zmniejsza liczbę żyć gracza o 1. 
+
+\Hypertarget{class_player_a194b7082791d882887071d8d2893c5e4}\label{class_player_a194b7082791d882887071d8d2893c5e4} 
+\index{Player@{Player}!update@{update}}
+\index{update@{update}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Player\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Aktualizuje stan gracza. 
+
+Odpowiada za obsługę logiki ruchu, kolizji i interakcji gracza z otoczeniem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas, który upłynął od ostatniej aktualizacji. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_entity_a2dec8c8ca1cf137d05a7d910e7b01f7b}{Entity}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_ab8fcb64fc827192e48d388efc2d7c2ef}\label{class_player_ab8fcb64fc827192e48d388efc2d7c2ef} 
+\index{Player@{Player}!cash@{cash}}
+\index{cash@{cash}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{cash}{cash}}
+{\footnotesize\ttfamily int Player\+::cash}
+
+Liczba monet zebranych przez gracza. \Hypertarget{class_player_addf1269f90166e298d38d0c6ee2be740}\label{class_player_addf1269f90166e298d38d0c6ee2be740} 
+\index{Player@{Player}!key@{key}}
+\index{key@{key}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, bool$>$ Player\+::key}
+
+Mapa stanów klawiszy kontrolujących ruch gracza. \Hypertarget{class_player_a505c5da08bfb03d355b964dfceb3284d}\label{class_player_a505c5da08bfb03d355b964dfceb3284d} 
+\index{Player@{Player}!life@{life}}
+\index{life@{life}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{life}{life}}
+{\footnotesize\ttfamily int Player\+::life}
+
+Liczba żyć gracza. \Hypertarget{class_player_a32af155f20f8eca16c17639d46c184dc}\label{class_player_a32af155f20f8eca16c17639d46c184dc} 
+\index{Player@{Player}!lifeCooldown@{lifeCooldown}}
+\index{lifeCooldown@{lifeCooldown}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{lifeCooldown}{lifeCooldown}}
+{\footnotesize\ttfamily float Player\+::life\+Cooldown}
+
+Czas od ostatniej utraty życia. \Hypertarget{class_player_ae698c01043483722dcf6c2cb54e5ece4}\label{class_player_ae698c01043483722dcf6c2cb54e5ece4} 
+\index{Player@{Player}!STATE@{STATE}}
+\index{STATE@{STATE}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{[]}{[]}}
+{\footnotesize\ttfamily enum  \{ ... \}  Player\+::\+STATE}
+
+\Hypertarget{class_player_a228e653dae4b061e17a2118699b150cc}\label{class_player_a228e653dae4b061e17a2118699b150cc} 
+\index{Player@{Player}!sx@{sx}}
+\index{sx@{sx}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{sx}{sx}}
+{\footnotesize\ttfamily float Player\+::sx}
+
+Prędkość w osi X. \Hypertarget{class_player_a1407bd2fbd22b54bd944f52d58ed6f6d}\label{class_player_a1407bd2fbd22b54bd944f52d58ed6f6d} 
+\index{Player@{Player}!sy@{sy}}
+\index{sy@{sy}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{sy}{sy}}
+{\footnotesize\ttfamily float Player\+::sy}
+
+Prędkość w osi Y. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{player_8hpp}{player.\+hpp}}\item 
+\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

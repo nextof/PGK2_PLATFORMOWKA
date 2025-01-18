@@ -1,0 +1,151 @@
+\doxysection{Enemy Class Reference}
+\hypertarget{class_enemy}{}\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+Klasa reprezentująca przeciwnika w grze.  
+
+
+
+
+{\ttfamily \#include $<$enemy.\+hpp$>$}
+
+Inheritance diagram for Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_enemy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_a9db1d279ec9f41ab9b929ba8013acd5e}{Enemy}} (\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&a, \mbox{\hyperlink{class_level}{Level}} \&lev, int \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}}, int \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_enemy}{Enemy}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a56a41cd549d466f48e1782e2c7411eb9}{update}} (float time)
+\begin{DoxyCompactList}\small\item\em Aktualizuje stan przeciwnika w grze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a2bd9d9998260846fcd08f971d3de43f1}{Collision}} (float Dx, float Dy)
+\begin{DoxyCompactList}\small\item\em Obsługuje kolizję przeciwnika z innymi obiektami. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_aa0f89b20cbb7169ee85ccbb5fa882e4c}{Entity}} (\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&A, int X, int Y)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a1c18bc58da8e329a0da5d74453e55fd2}{draw}} (Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Rysuje obiekt na ekranie. \end{DoxyCompactList}\item 
+Float\+Rect \mbox{\hyperlink{class_entity_a38630f17b0492a9d050aef2d607f4dea}{get\+Rect}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera prostokąt kolizji obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_abe3e38fc4be7170845fa9d3956e15782}{option}} (std\+::string NAME, float SPEED, std\+::string FIRST\+\_\+\+ANIM)
+\begin{DoxyCompactList}\small\item\em Ustawia opcje dla obiektu. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}}
+\item 
+float \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}}
+\item 
+float \mbox{\hyperlink{class_entity_a182c63e0b0bedf2159e47b019d769ec4}{dx}}
+\item 
+float \mbox{\hyperlink{class_entity_ade4d0d757640434826ba88607f1af535}{dy}}
+\item 
+float \mbox{\hyperlink{class_entity_a4cf0936f4349e066097cf40cf17a6ef4}{w}}
+\item 
+float \mbox{\hyperlink{class_entity_a060bc83a062f686b270cfe208d292d0e}{h}}
+\item 
+\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \mbox{\hyperlink{class_entity_af6e3b2a9fd106f05c8a5dfab1a4de674}{anim}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ \mbox{\hyperlink{class_entity_ac1c4ea97ac42e673e1b3c581e19708b5}{obj}}
+\item 
+bool \mbox{\hyperlink{class_entity_a6705d3a1fa7425b3a6f9704603e2c46e}{life}}
+\item 
+bool \mbox{\hyperlink{class_entity_a0867f766d6b1eb8bcfeafff48fd9ea42}{dir}}
+\item 
+float \mbox{\hyperlink{class_entity_a15b57d90cfb0c1f666d2a6b2318aabad}{timer}}
+\item 
+float \mbox{\hyperlink{class_entity_a0dcf918ad770f6245b812dfbd82f5426}{timer\+\_\+end}}
+\item 
+std\+::string \mbox{\hyperlink{class_entity_ae8f30f7e882096be1fe49167a16d8611}{Name}}
+\item 
+bool \mbox{\hyperlink{class_entity_aa7ed90c2614fa44d37c0233d12816080}{is\+Dead}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca przeciwnika w grze. 
+
+Dziedziczy po klasie \doxylink{class_entity}{Entity}. Reprezentuje wrogów poruszających się po poziomie gry, którzy mogą wchodzić w interakcję z graczem. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_enemy_a9db1d279ec9f41ab9b929ba8013acd5e}\label{class_enemy_a9db1d279ec9f41ab9b929ba8013acd5e} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animation_manager}{Animation\+Manager}} \&}]{a,  }\item[{\mbox{\hyperlink{class_level}{Level}} \&}]{lev,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Konstruktor klasy \doxylink{class_enemy}{Enemy}. 
+
+Tworzy obiekt przeciwnika, ustawiając animacje, pozycję oraz poziom, na którym się znajduje.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Obiekt \doxylink{class_animation_manager}{Animation\+Manager} do zarządzania animacjami przeciwnika. \\
+\hline
+{\em lev} & Obiekt \doxylink{class_level}{Level} reprezentujący poziom, na którym przeciwnik się znajduje. \\
+\hline
+{\em x} & Współrzędna X początkowej pozycji przeciwnika. \\
+\hline
+{\em y} & Współrzędna Y początkowej pozycji przeciwnika. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_enemy_a2bd9d9998260846fcd08f971d3de43f1}\label{class_enemy_a2bd9d9998260846fcd08f971d3de43f1} 
+\index{Enemy@{Enemy}!Collision@{Collision}}
+\index{Collision@{Collision}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Collision()}{Collision()}}
+{\footnotesize\ttfamily void Enemy\+::\+Collision (\begin{DoxyParamCaption}\item[{float}]{Dx,  }\item[{float}]{Dy }\end{DoxyParamCaption})}
+
+
+
+Obsługuje kolizję przeciwnika z innymi obiektami. 
+
+Funkcja wykrywa i obsługuje kolizje w zależności od kierunku ruchu przeciwnika.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dx} & Przesunięcie w osi X. \\
+\hline
+{\em Dy} & Przesunięcie w osi Y. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_enemy_a56a41cd549d466f48e1782e2c7411eb9}\label{class_enemy_a56a41cd549d466f48e1782e2c7411eb9} 
+\index{Enemy@{Enemy}!update@{update}}
+\index{update@{update}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Enemy\+::update (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Aktualizuje stan przeciwnika w grze. 
+
+Funkcja odpowiedzialna za obsługę logiki przeciwnika, w tym ruchu i zachowań.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Czas, który upłynął od ostatniej aktualizacji. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_entity_a2dec8c8ca1cf137d05a7d910e7b01f7b}{Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enemy_8hpp}{enemy.\+hpp}}\item 
+\mbox{\hyperlink{enemy_8cpp}{enemy.\+cpp}}\end{DoxyCompactItemize}

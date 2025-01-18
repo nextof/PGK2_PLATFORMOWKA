@@ -1,0 +1,40 @@
+\doxysection{player.\+hpp}
+\hypertarget{player_8hpp_source}{}\label{player_8hpp_source}\mbox{\hyperlink{player_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ PLAYER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ \mbox{\hyperlink{class_player_a53205b77fc29c601a2cfaa7178812082a82d28ed7a049f51da77a54e279b76201}{stay}},\ \mbox{\hyperlink{class_player_a53205b77fc29c601a2cfaa7178812082a953285412ecf97f63d2a975bbe64d216}{walk}},\ \mbox{\hyperlink{class_player_a53205b77fc29c601a2cfaa7178812082a20e4a8eaac1201f8bae32656f0b2d9db}{jump}}\ \}\ \mbox{\hyperlink{class_player_ae698c01043483722dcf6c2cb54e5ece4}{STATE}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_ab8fcb64fc827192e48d388efc2d7c2ef}{cash}};\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_a228e653dae4b061e17a2118699b150cc}{sx}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_a1407bd2fbd22b54bd944f52d58ed6f6d}{sy}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::map<std::string,\ bool>\ \mbox{\hyperlink{class_player_addf1269f90166e298d38d0c6ee2be740}{key}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a505c5da08bfb03d355b964dfceb3284d}{life}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_a32af155f20f8eca16c17639d46c184dc}{lifeCooldown}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_player_aeb5e4390668b29ad129c2e75dd531c24}{Player}}(\mbox{\hyperlink{class_animation_manager}{AnimationManager}}\&\ a,\ \mbox{\hyperlink{class_level}{Level}}\&\ lev,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a12ca9a126ede30c6806c416cc2a15531}{Keyboard}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_ada2132622cb96415afad9ed38e7ae7d5}{Animation}}(\textcolor{keywordtype}{float}\ time);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a194b7082791d882887071d8d2893c5e4}{update}}(\textcolor{keywordtype}{float}\ time);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a1cce87a1381fe1ec443ec9bb3d60be02}{Collision}}(\textcolor{keywordtype}{int}\ num);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_aeb43840d6cec601bc3798e751624a0e2}{getLife}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a244fafe6143720247572f473dafb17ba}{minusLife}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_ab7d94f1b8b6a29decc00cca41b13cab3}{addLife}}();}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLAYER\_H}}
+
+\end{DoxyCode}

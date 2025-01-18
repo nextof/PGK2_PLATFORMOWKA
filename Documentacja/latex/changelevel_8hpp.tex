@@ -1,0 +1,44 @@
+\doxysection{changelevel.\+hpp File Reference}
+\hypertarget{changelevel_8hpp}{}\label{changelevel_8hpp}\index{changelevel.hpp@{changelevel.hpp}}
+{\ttfamily \#include "{}level.\+hpp"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{changelevel_8hpp_a16386d6bce83fe7afe5ec0183f7c1b58}{CHANGELEVEL\+\_\+H}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{changelevel_8hpp_ac65212dbdfdc28591c5d6aed68f9b9cb}{change\+Level}} (\mbox{\hyperlink{class_level}{Level}} \&lvl, int \&number\+Level)
+\begin{DoxyCompactList}\small\item\em Zmienia poziom gry na podstawie przekazanego numeru poziomu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{changelevel_8hpp_a16386d6bce83fe7afe5ec0183f7c1b58}\label{changelevel_8hpp_a16386d6bce83fe7afe5ec0183f7c1b58} 
+\index{changelevel.hpp@{changelevel.hpp}!CHANGELEVEL\_H@{CHANGELEVEL\_H}}
+\index{CHANGELEVEL\_H@{CHANGELEVEL\_H}!changelevel.hpp@{changelevel.hpp}}
+\doxysubsubsection{\texorpdfstring{CHANGELEVEL\_H}{CHANGELEVEL\_H}}
+{\footnotesize\ttfamily \#define CHANGELEVEL\+\_\+H}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{changelevel_8hpp_ac65212dbdfdc28591c5d6aed68f9b9cb}\label{changelevel_8hpp_ac65212dbdfdc28591c5d6aed68f9b9cb} 
+\index{changelevel.hpp@{changelevel.hpp}!changeLevel@{changeLevel}}
+\index{changeLevel@{changeLevel}!changelevel.hpp@{changelevel.hpp}}
+\doxysubsubsection{\texorpdfstring{changeLevel()}{changeLevel()}}
+{\footnotesize\ttfamily void change\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_level}{Level}} \&}]{lvl,  }\item[{int \&}]{number\+Level }\end{DoxyParamCaption})}
+
+
+
+Zmienia poziom gry na podstawie przekazanego numeru poziomu. 
+
+Funkcja aktualizuje obiekt poziomu oraz numer poziomu w grze. Może być wykorzystywana do przechodzenia pomiędzy różnymi etapami rozgrywki.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lvl} & Obiekt klasy \doxylink{class_level}{Level} reprezentujący aktualny poziom. \\
+\hline
+{\em number\+Level} & Numer poziomu, na który gra ma zostać zmieniona (referencja). \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,171 @@
+\doxysection{Level Class Reference}
+\hypertarget{class_level}{}\label{class_level}\index{Level@{Level}}
+
+
+Klasa reprezentująca poziom gry.  
+
+
+
+
+{\ttfamily \#include $<$level.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_level_a1f10e04fbe066347b35705c01dc0b115}{Load\+From\+File}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Wczytuje poziom z pliku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_object}{Object}} \mbox{\hyperlink{class_level_aafa37d550b85fed38e0159f5b257807f}{Get\+Object}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Pobiera obiekt o podanej nazwie. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ \mbox{\hyperlink{class_level_af2cf043bba0975f84715b2440c533e63}{Get\+Objects}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Pobiera listę obiektów o podanej nazwie. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ \mbox{\hyperlink{class_level_ab452f6b61d41944913e65b38065acb00}{Get\+Objects2}} (std\+::string name, std\+::string name2)
+\begin{DoxyCompactList}\small\item\em Pobiera listę obiektów o dwóch podanych nazwach. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ \mbox{\hyperlink{class_level_ad19d1668472c30ef1aa1360a52f129cf}{Get\+All\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera wszystkie obiekty z poziomu. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_level_aa857a970cf07f16316546f82ce9cd3e4}{Get\+Tile\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera rozmiar pojedynczego kafelka na poziomie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_ae3c2bfbfc60cb52c1945eea100141f32}{Draw}} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Rysuje poziom na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_level_a3cd4b851e4f4088bfa5f82ab1249c761}{level\+Number}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca poziom gry. 
+
+Obsługuje wczytywanie poziomów z plików, rysowanie poziomów oraz zarządzanie obiektami i warstwami. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_ae3c2bfbfc60cb52c1945eea100141f32}\label{class_level_ae3c2bfbfc60cb52c1945eea100141f32} 
+\index{Level@{Level}!Draw@{Draw}}
+\index{Draw@{Draw}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Level\+::\+Draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Rysuje poziom na ekranie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Okno, w którym poziom ma być rysowany. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_level_ad19d1668472c30ef1aa1360a52f129cf}\label{class_level_ad19d1668472c30ef1aa1360a52f129cf} 
+\index{Level@{Level}!GetAllObjects@{GetAllObjects}}
+\index{GetAllObjects@{GetAllObjects}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetAllObjects()}{GetAllObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ Level\+::\+Get\+All\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobiera wszystkie obiekty z poziomu. 
+
+\begin{DoxyReturn}{Returns}
+Wektor wszystkich obiektów. 
+\end{DoxyReturn}
+\Hypertarget{class_level_aafa37d550b85fed38e0159f5b257807f}\label{class_level_aafa37d550b85fed38e0159f5b257807f} 
+\index{Level@{Level}!GetObject@{GetObject}}
+\index{GetObject@{GetObject}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetObject()}{GetObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_object}{Object}} Level\+::\+Get\+Object (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Pobiera obiekt o podanej nazwie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa obiektu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Obiekt o podanej nazwie. 
+\end{DoxyReturn}
+\Hypertarget{class_level_af2cf043bba0975f84715b2440c533e63}\label{class_level_af2cf043bba0975f84715b2440c533e63} 
+\index{Level@{Level}!GetObjects@{GetObjects}}
+\index{GetObjects@{GetObjects}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetObjects()}{GetObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ Level\+::\+Get\+Objects (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Pobiera listę obiektów o podanej nazwie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Nazwa obiektów do pobrania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor obiektów o podanej nazwie. 
+\end{DoxyReturn}
+\Hypertarget{class_level_ab452f6b61d41944913e65b38065acb00}\label{class_level_ab452f6b61d41944913e65b38065acb00} 
+\index{Level@{Level}!GetObjects2@{GetObjects2}}
+\index{GetObjects2@{GetObjects2}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetObjects2()}{GetObjects2()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{struct_object}{Object}} $>$ Level\+::\+Get\+Objects2 (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{name2 }\end{DoxyParamCaption})}
+
+
+
+Pobiera listę obiektów o dwóch podanych nazwach. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Pierwsza nazwa obiektów. \\
+\hline
+{\em name2} & Druga nazwa obiektów. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor obiektów pasujących do podanych nazw. 
+\end{DoxyReturn}
+\Hypertarget{class_level_aa857a970cf07f16316546f82ce9cd3e4}\label{class_level_aa857a970cf07f16316546f82ce9cd3e4} 
+\index{Level@{Level}!GetTileSize@{GetTileSize}}
+\index{GetTileSize@{GetTileSize}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetTileSize()}{GetTileSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Level\+::\+Get\+Tile\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pobiera rozmiar pojedynczego kafelka na poziomie. 
+
+\begin{DoxyReturn}{Returns}
+Wektor dwuwymiarowy określający szerokość i wysokość kafelka. 
+\end{DoxyReturn}
+\Hypertarget{class_level_a1f10e04fbe066347b35705c01dc0b115}\label{class_level_a1f10e04fbe066347b35705c01dc0b115} 
+\index{Level@{Level}!LoadFromFile@{LoadFromFile}}
+\index{LoadFromFile@{LoadFromFile}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{LoadFromFile()}{LoadFromFile()}}
+{\footnotesize\ttfamily bool Level\+::\+Load\+From\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Wczytuje poziom z pliku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Ścieżka do pliku poziomu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Jeśli poziom został wczytany pomyślnie, false w przeciwnym razie. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_level_a3cd4b851e4f4088bfa5f82ab1249c761}\label{class_level_a3cd4b851e4f4088bfa5f82ab1249c761} 
+\index{Level@{Level}!levelNumber@{levelNumber}}
+\index{levelNumber@{levelNumber}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelNumber}{levelNumber}}
+{\footnotesize\ttfamily int Level\+::level\+Number}
+
+Numer poziomu. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{level_8hpp}{level.\+hpp}}\item 
+\mbox{\hyperlink{level_8cpp}{level.\+cpp}}\end{DoxyCompactItemize}

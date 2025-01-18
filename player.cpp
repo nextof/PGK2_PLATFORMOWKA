@@ -1,18 +1,19 @@
-#pragma once
+﻿#pragma once
 #include "player.hpp"
 
 Player::Player(AnimationManager& a, Level& lev, int x, int y) :Entity(a, x, y)
 {
-	option("Player", 0, "stay");
-	STATE = stay;
-	cash = 0;
-	obj = lev.GetAllObjects();
-	life = 13;
-	lifeCooldown = 0.0f;
+	option("Player", 0, "stay"); // Ustaw nazwę, prędkość początkową i animację "stay".
+	STATE = stay; // Początkowy stan gracza: "stay".
+	cash = 0; // Liczba zebranych monet.
+	obj = lev.GetAllObjects(); // Pobierz wszystkie obiekty z poziomu dla detekcji kolizji.
+	life = 5; // Ustaw początkową liczbę żyć.
+	lifeCooldown = 0.0f; // Czas między otrzymywaniem obrażeń.
 }
 
 void Player::Keyboard()
 {
+	// Obsługa ruchu
 	if (key["L"] || key["A"])
 	{
 		dir = 1;
@@ -39,17 +40,20 @@ void Player::Keyboard()
 		if (STATE == walk) STATE = stay;
 	}
 
+	// Resetowanie stanów klawiszy.
 	key["R"] = key["L"] = key["Space"] = key["Shift"] = key["A"] = key["D"] = key["W"] =  false;
 }
 
 void Player::Animation(float time)
 {
+	// Ustawienie odpowiedniej animacji na podstawie stanu gracza.
 	if (STATE == stay) anim.set("stay");
 	if (STATE == walk) anim.set("walk");
 	if (STATE == jump) anim.set("jump");
 
-	if (dir) anim.flip(1);
-
+	if (dir) anim.flip(1); // Odwrócenie animacji w lewo.
+	 
+	// Obsługa animacji i logiki śmierci gracza.
 	if (isDead == true) {
 		dx = 0;
 		dy = 0;
@@ -58,17 +62,19 @@ void Player::Animation(float time)
 		anim.set("hit");
 	}
 
-	anim.tick(time);
+	anim.tick(time); // Aktualizuj animację.
 }
 
 void Player::update(float time)
 {
-	Keyboard();
+	Keyboard();  // Obsługa klawiatury.
 
-	Animation(time);
+	Animation(time); // Aktualizacja animacji.
 
-	dy += 0.00065 * time;
 
+	dy += 0.00065 * time;	// Dodanie grawitacji do ruchu w osi Y.
+
+	//Aktualizacja pozycji
 	x += dx * time;
 	Collision(0);
 
@@ -81,10 +87,11 @@ void Player::update(float time)
 
 void Player::Collision(int num)
 {
-
+	// Kolizja z obiektami 
 	for (int i = 0; i < obj.size(); i++)
 		if (getRect().intersects(obj[i].rect))
 		{
+
 			if (obj[i].name == "solid")
 			{
 				if (dy > 0 && num == 1) { y = obj[i].rect.top - h;  dy = 0;   STATE = stay; }
@@ -131,6 +138,7 @@ int Player::getLife()
 void Player::minusLife()
 {
 	life--;
+
 }
 
 void Player::addLife()

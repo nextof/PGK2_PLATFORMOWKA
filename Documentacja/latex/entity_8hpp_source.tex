@@ -1,0 +1,47 @@
+\doxysection{entity.\+hpp}
+\hypertarget{entity_8hpp_source}{}\label{entity_8hpp_source}\mbox{\hyperlink{entity_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ ENTITY\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ ENTITY\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{animation_8hpp}{animation.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{level_8hpp}{level.hpp}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_abc2d19ee6ff26b8520428894da6a8f68}{x}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_af4966f81d91cc8f8d5eb9e9002240c49}{y}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_a182c63e0b0bedf2159e47b019d769ec4}{dx}};\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_ade4d0d757640434826ba88607f1af535}{dy}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_a4cf0936f4349e066097cf40cf17a6ef4}{w}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_a060bc83a062f686b270cfe208d292d0e}{h}};\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_animation_manager}{AnimationManager}}\ \mbox{\hyperlink{class_entity_af6e3b2a9fd106f05c8a5dfab1a4de674}{anim}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<Object>\ \mbox{\hyperlink{class_entity_ac1c4ea97ac42e673e1b3c581e19708b5}{obj}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_a6705d3a1fa7425b3a6f9704603e2c46e}{life}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_a0867f766d6b1eb8bcfeafff48fd9ea42}{dir}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_a15b57d90cfb0c1f666d2a6b2318aabad}{timer}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_entity_a0dcf918ad770f6245b812dfbd82f5426}{timer\_end}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ \mbox{\hyperlink{class_entity_ae8f30f7e882096be1fe49167a16d8611}{Name}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_aa7ed90c2614fa44d37c0233d12816080}{isDead}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_entity_aa0f89b20cbb7169ee85ccbb5fa882e4c}{Entity}}(\mbox{\hyperlink{class_animation_manager}{AnimationManager}}\&\ A,\ \textcolor{keywordtype}{int}\ X,\ \textcolor{keywordtype}{int}\ Y);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a2dec8c8ca1cf137d05a7d910e7b01f7b}{update}}(\textcolor{keywordtype}{float}\ time)\ =\ 0;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a1c18bc58da8e329a0da5d74453e55fd2}{draw}}(RenderWindow\&\ window);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ FloatRect\ \mbox{\hyperlink{class_entity_a38630f17b0492a9d050aef2d607f4dea}{getRect}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_abe3e38fc4be7170845fa9d3956e15782}{option}}(std::string\ NAME,\ \textcolor{keywordtype}{float}\ SPEED,\ std::string\ FIRST\_ANIM);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\string~Entity}}();}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENTITY\_H}}
+
+\end{DoxyCode}
